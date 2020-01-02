@@ -149,14 +149,21 @@ public class cowreportDAO implements DAO<cowreportModel> {
 	}
 	
 	public ArrayList<HashMap<String, Object>> FindCowBirth(int cowid){
-		String sql = "select cow_birth_log_id,cow_birth_log_date,\n" +
-				"(select cow_name FROM tbd_cow where cow_id = cow_birth_log_id)  as lok_cow_name,\n" +
-				"(SELECT cow_ear_code from tbd_cow where cow_id = cow_birth_log_id) as lok_cow_ear_code   ,\n" +
-				"(select cow_sex from tbd_cow where cow_id = cow_birth_log_id) as lok_cow_sex\n" +
-				"from tbd_cow_birth_log where cow_id=  "+ cowid +"; " ;
+		String sql =  "select tbd_cow.cow_name,tbd_cow.cow_sex,tbd_cow.cow_birth,tbd_cow.cow_ear_code from tbd_cow where tbd_cow.cow_ma_zyan_code = (select tbd_cow.zyan_code FROM tbd_cow where tbd_cow.cow_id = "+ cowid +")  ORDER BY tbd_cow.cow_birth ASC ;" ;
 		ArrayList<HashMap<String, Object>> quertList = db.queryList(sql);
 		return quertList;
 	}
+	public ArrayList<HashMap<String, Object>> FindCowVaccien(int cowid){
+		String sql = "select row_number() over (ORDER BY cow_vaccien_date_event) as \"NO\",cow_id,cow_vaccien_date_event,cow_vaccien_name FROM tbd_cow_vaccien where cow_id = "+ cowid +"; " ;
+		ArrayList<HashMap<String, Object>> quertList = db.queryList(sql);
+		return quertList;
+	}
+	public ArrayList<HashMap<String, Object>> FindCowMedicine(int cowid){
+		String sql = "select *,row_number() over (ORDER BY cow_medicine_date_event) as \"NO\" from zyanwoadev.tbd_cow_medicine  where  cow_id = "+ cowid +"; " ;
+		ArrayList<HashMap<String, Object>> quertList = db.queryList(sql);
+		return quertList;
+	}
+	
 	
 	
 	@Override

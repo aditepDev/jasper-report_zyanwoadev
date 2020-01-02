@@ -56,9 +56,11 @@ response.setContentType("text/html;charset=UTF-8");
 			ArrayList<HashMap<String, Object>> cowrList = cowrDAO.FindAllbyID(id);
 			ArrayList<HashMap<String, Object>> cowrList2 = cowrDAO.FindCowBreeding(id);
 			ArrayList<HashMap<String, Object>> cowbirth = cowrDAO.FindCowBirth(id);
+			ArrayList<HashMap<String, Object>> cowVaccien = cowrDAO.FindCowVaccien(id);
+			ArrayList<HashMap<String, Object>> cowMedicine = cowrDAO.FindCowMedicine(id);
 			
 			for (int i = 0; i < cowbirth.size(); i++) {
-				System.out.println(cowbirth.get(i).get("lok_cow_name")+" "+cowbirth.get(i).get("lok_cow_sex"));
+				System.out.println(cowbirth.get(i).get("cow_name")+" "+cowbirth.get(i).get("cow_sex"));
 			}
 //			System.out.println(cowrList.get("cow_ids"));
 //			ArrayList<cowreportModel> cowrList =  cowrDAO.FindAll();
@@ -87,23 +89,27 @@ response.setContentType("text/html;charset=UTF-8");
 			String supcowreport_breedingtFileName = "supcowreport_breeding.jrxml"; 
 			String supcowreport_breedingPath = "E:\\SpringWebMVC_JasperReport\\src\\" + supcowreport_breedingtFileName;
 			
-//			String supcowreport_namecowFileName = "supcowreport_namecow.jrxml"; 
-//			String supcowreport_namecowPath = "E:\\Java\\intren\\SpringWebMVC_JasperReport\\src\\" + supcowreport_namecowFileName;
+			String supcowreport_cow_vaccienFileName = "supcowreport_cow_vaccien.jrxml"; 
+			String supcowreport_cow_vaccienPath = "E:\\SpringWebMVC_JasperReport\\src\\" + supcowreport_cow_vaccienFileName;
 
 			String supcowreport_cowbirthFileName = "supcowreport_birth.jrxml";
 			String supcowreport_cowbirthPath = "E:\\SpringWebMVC_JasperReport\\src\\" + supcowreport_cowbirthFileName;
 
-			
+			String supcowreport_cowMedicineFileName = "supcowreport_cow_medicine.jrxml";
+			String supcowreport_cowMedicinePath = "E:\\SpringWebMVC_JasperReport\\src\\" + supcowreport_cowMedicineFileName;
 			
 			JasperReport jasperReport = JasperCompileManager.compileReport(reportPath);
 			JasperReport supcowreport_breedingParameter  = JasperCompileManager.compileReport(supcowreport_breedingPath);
 			JasperReport supcowreport_cowbirthParameter = JasperCompileManager.compileReport(supcowreport_cowbirthPath);
-			
+			JasperReport supcowreport_cow_vaccienParameter = JasperCompileManager.compileReport(supcowreport_cow_vaccienPath);
+			JasperReport supcowreport_cowMedicineParameter = JasperCompileManager.compileReport(supcowreport_cowMedicinePath);
 			
 			
 			JRBeanCollectionDataSource dataSource = new JRBeanCollectionDataSource(cowrList);	
 			JRBeanCollectionDataSource supcowreport_breedingDataSource = new JRBeanCollectionDataSource(cowrList2);
 			JRBeanCollectionDataSource supcowreport_cowbirthDataSource = new JRBeanCollectionDataSource(cowbirth);
+			JRBeanCollectionDataSource supcowreport_cow_vaccienDataSource = new JRBeanCollectionDataSource(cowVaccien);
+			JRBeanCollectionDataSource supcowreport_cowMedicineDataSource = new JRBeanCollectionDataSource(cowMedicine);
 			
 			 Map<String, Object> parameters = new HashMap<>();
 		        parameters.put("ID", id);
@@ -111,6 +117,12 @@ response.setContentType("text/html;charset=UTF-8");
 		        parameters.put("SUBREPORT_cowbreeding_DATA_SOURCE", supcowreport_breedingDataSource);
 		        parameters.put("Subreport_cowbirth_Parameter", supcowreport_cowbirthParameter);
 		        parameters.put("SUBREPORT_cowbirth_DATA_SOURCE", supcowreport_cowbirthDataSource);
+		        parameters.put("Subreport_ cowVaccien_Parameter", supcowreport_cow_vaccienParameter);
+		        parameters.put("SUBREPORT_cowVaccien_DATA_SOURCE", supcowreport_cow_vaccienDataSource);
+		        parameters.put("Subreport_cowMedicine_Parameter", supcowreport_cowMedicineParameter);
+		        parameters.put("SUBREPORT_cowMedicine_DATA_SOURCE", supcowreport_cowMedicineDataSource);
+		        
+		        
 //		  
 		  
 		        

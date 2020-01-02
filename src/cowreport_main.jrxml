@@ -12,6 +12,10 @@
 	<parameter name="SUBREPORT_cowbirth_DATA_SOURCE" class="net.sf.jasperreports.engine.JRDataSource"/>
 	<parameter name="Subreport_cowbreeding_Parameter" class="net.sf.jasperreports.engine.JasperReport"/>
 	<parameter name="SUBREPORT_cowbreeding_DATA_SOURCE" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="Subreport_ cowVaccien_Parameter" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="SUBREPORT_cowVaccien_DATA_SOURCE" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="Subreport_cowMedicine_Parameter" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="SUBREPORT_cowMedicine_DATA_SOURCE" class="net.sf.jasperreports.engine.JRDataSource"/>
 	<queryString language="SQL">
 		<![CDATA[select * from  zyanwoadev.cowreport where cow_ids = $P{ID}]]>
 	</queryString>
@@ -242,14 +246,14 @@
 	<background>
 		<band height="19">
 			<textField>
-				<reportElement x="700" y="0" width="51" height="19" uuid="0ff27b29-27e2-4117-ae41-245e1928197c"/>
+				<reportElement x="720" y="0" width="51" height="19" uuid="0ff27b29-27e2-4117-ae41-245e1928197c"/>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="12"/>
 				</textElement>
 				<textFieldExpression><![CDATA["หน้า " + $V{PAGE_NUMBER}]]></textFieldExpression>
 			</textField>
 			<textField evaluationTime="Report">
-				<reportElement x="751" y="0" width="51" height="19" uuid="8b9afe67-a6e0-474b-93ad-7f145c41fdf5"/>
+				<reportElement x="770" y="0" width="51" height="19" uuid="8b9afe67-a6e0-474b-93ad-7f145c41fdf5"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="12"/>
 				</textElement>
@@ -606,7 +610,7 @@
 			</staticText>
 			<textField>
 				<reportElement x="500" y="91" width="280" height="18" uuid="ffd5b5ae-34cb-486f-afef-92534260b7bd"/>
-				<textElement verticalAlignment="Middle">
+				<textElement verticalAlignment="Top">
 					<font fontName="TH SarabunPSK" size="14" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{zyan_code}]]></textFieldExpression>
@@ -620,20 +624,38 @@
 			</textField>
 		</band>
 	</title>
+	<pageHeader>
+		<band height="22"/>
+	</pageHeader>
 	<detail>
-		<band height="39">
+		<band height="15" splitType="Stretch">
 			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
 			<subreport>
-				<reportElement x="400" y="25" width="418" height="12" uuid="09f74339-1686-4144-a87c-1f2505d8971b"/>
-				<dataSourceExpression><![CDATA[$P{SUBREPORT_cowbirth_DATA_SOURCE}]]></dataSourceExpression>
-				<subreportExpression><![CDATA[$P{Subreport_cowbirth_Parameter}]]></subreportExpression>
-			</subreport>
-			<subreport>
-				<reportElement x="-20" y="0" width="398" height="12" uuid="666c9f60-835a-4742-ba9b-db26fc42d422">
+				<reportElement x="0" y="2" width="802" height="11" uuid="666c9f60-835a-4742-ba9b-db26fc42d422">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<dataSourceExpression><![CDATA[$P{SUBREPORT_cowbreeding_DATA_SOURCE}]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{Subreport_cowbreeding_Parameter}]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="14">
+			<property name="com.jaspersoft.studio.layout"/>
+			<subreport>
+				<reportElement x="0" y="2" width="397" height="11" uuid="09f74339-1686-4144-a87c-1f2505d8971b"/>
+				<dataSourceExpression><![CDATA[$P{SUBREPORT_cowbirth_DATA_SOURCE}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{Subreport_cowbirth_Parameter}]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement x="400" y="2" width="402" height="10" uuid="e1e1b7c6-66fb-46e3-a8ca-c325f01de556"/>
+				<dataSourceExpression><![CDATA[$P{SUBREPORT_cowVaccien_DATA_SOURCE}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{Subreport_ cowVaccien_Parameter}]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="12">
+			<subreport>
+				<reportElement x="0" y="2" width="802" height="10" uuid="41f0e2d2-b997-4e91-a973-57307d94282f"/>
+				<dataSourceExpression><![CDATA[$P{SUBREPORT_cowMedicine_DATA_SOURCE}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{Subreport_cowMedicine_Parameter}]]></subreportExpression>
 			</subreport>
 		</band>
 	</detail>
