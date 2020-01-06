@@ -79,24 +79,24 @@ response.setContentType("text/html;charset=UTF-8");
 //			System.out.println(model);
 //			
 			db.close();
-			
+			String Pathfile = "C:\\Users\\aditep\\git\\jasper-report_zyanwoadev\\src\\";
 			// path
 			String reportFileName = "cowreport_main.jrxml"; //test reportFileName
-			String reportPath = "E:\\SpringWebMVC_JasperReport\\src\\" + reportFileName;
+			String reportPath = Pathfile + reportFileName;
 			String targetFileName = reportFileName.replace(".jrxml", ".pdf");
 			
 			// sup 		
 			String supcowreport_breedingtFileName = "supcowreport_breeding.jrxml"; 
-			String supcowreport_breedingPath = "E:\\SpringWebMVC_JasperReport\\src\\" + supcowreport_breedingtFileName;
+			String supcowreport_breedingPath = Pathfile + supcowreport_breedingtFileName;
 			
 			String supcowreport_cow_vaccienFileName = "supcowreport_cow_vaccien.jrxml"; 
-			String supcowreport_cow_vaccienPath = "E:\\SpringWebMVC_JasperReport\\src\\" + supcowreport_cow_vaccienFileName;
+			String supcowreport_cow_vaccienPath = Pathfile + supcowreport_cow_vaccienFileName;
 
 			String supcowreport_cowbirthFileName = "supcowreport_birth.jrxml";
-			String supcowreport_cowbirthPath = "E:\\SpringWebMVC_JasperReport\\src\\" + supcowreport_cowbirthFileName;
+			String supcowreport_cowbirthPath = Pathfile + supcowreport_cowbirthFileName;
 
 			String supcowreport_cowMedicineFileName = "supcowreport_cow_medicine.jrxml";
-			String supcowreport_cowMedicinePath = "E:\\SpringWebMVC_JasperReport\\src\\" + supcowreport_cowMedicineFileName;
+			String supcowreport_cowMedicinePath = Pathfile + supcowreport_cowMedicineFileName;
 			
 			JasperReport jasperReport = JasperCompileManager.compileReport(reportPath);
 			JasperReport supcowreport_breedingParameter  = JasperCompileManager.compileReport(supcowreport_breedingPath);
@@ -143,7 +143,7 @@ response.setContentType("text/html;charset=UTF-8");
 
 			
 			// exportReportToPdfFile
-			String path = "C:\\Users\\topko\\desktop";
+			String path = "C:\\Users\\aditep\\desktop";
 //            JasperExportManager.exportReportToPdfFile(jasperPrint, path + "\\employees.pdf");
 
 	

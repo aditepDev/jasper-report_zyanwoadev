@@ -36,7 +36,7 @@
 		<property name="com.jaspersoft.studio.field.label" value="time_reg"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="tbd_cow_medicine"/>
 	</field>
-	<field name="NO" class="java.lang.Long">
+	<field name="NO" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="NO"/>
 	</field>
 	<columnHeader>
@@ -49,11 +49,14 @@
 					<reportElement x="0" y="0" width="790" height="46" uuid="59516d95-137e-460b-b989-c16e24cb3d29"/>
 					<frame>
 						<reportElement x="0" y="0" width="790" height="20" uuid="e6e3e571-912f-41c5-9b75-c21c966b1add">
-							<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+							<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
 						</reportElement>
 						<box>
 							<pen lineWidth="0.0" lineStyle="Dotted"/>
 						</box>
+						<rectangle>
+							<reportElement x="0" y="0" width="790" height="20" backcolor="#F0F8FF" uuid="0b2b8a92-3e0b-4d8a-b2f9-9767f9a16fb9"/>
+						</rectangle>
 						<staticText>
 							<reportElement x="0" y="0" width="790" height="20" uuid="ad63a3aa-e196-4252-86df-7683d3a61701"/>
 							<box>
@@ -63,7 +66,7 @@
 								<rightPen lineWidth="1.0"/>
 							</box>
 							<textElement textAlignment="Center" verticalAlignment="Middle">
-								<font fontName="TH SarabunPSK" size="16"/>
+								<font fontName="TH SarabunPSK" size="16" isBold="true"/>
 							</textElement>
 							<text><![CDATA[ประวัติการรักษาด้วยยา]]></text>
 						</staticText>
@@ -88,7 +91,7 @@
 							<text><![CDATA[#]]></text>
 						</staticText>
 						<staticText>
-							<reportElement x="50" y="0" width="210" height="26" uuid="97323822-6710-486b-ad29-93c16b5d88ee"/>
+							<reportElement x="50" y="0" width="120" height="26" uuid="97323822-6710-486b-ad29-93c16b5d88ee"/>
 							<box>
 								<leftPen lineWidth="1.0"/>
 								<bottomPen lineWidth="1.0"/>
@@ -99,7 +102,7 @@
 							<text><![CDATA[วันที่รักษา]]></text>
 						</staticText>
 						<staticText>
-							<reportElement x="260" y="0" width="530" height="26" uuid="5966e722-4942-4a74-bd95-cf9a9f3e1dbf"/>
+							<reportElement x="170" y="0" width="620" height="26" uuid="5966e722-4942-4a74-bd95-cf9a9f3e1dbf"/>
 							<box>
 								<leftPen lineWidth="1.0"/>
 								<bottomPen lineWidth="1.0"/>
@@ -124,9 +127,9 @@
 				</reportElement>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textField>
 					<reportElement x="0" y="0" width="50" height="29" uuid="9881fed3-9692-466d-9148-d729d30b482d"/>
@@ -136,24 +139,24 @@
 					<textFieldExpression><![CDATA[$F{NO}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement x="50" y="0" width="210" height="29" uuid="29df847d-3c76-41cb-a018-0cafb07c34ac"/>
+					<reportElement x="50" y="0" width="120" height="29" uuid="29df847d-3c76-41cb-a018-0cafb07c34ac"/>
 					<textElement textAlignment="Center" verticalAlignment="Middle">
 						<font fontName="TH SarabunPSK" size="14"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{cow_medicine_date_event}]]></textFieldExpression>
 				</textField>
 				<textField>
-					<reportElement x="260" y="0" width="530" height="29" uuid="34997796-94b5-4596-9972-c7bde9f6eb1a"/>
+					<reportElement x="170" y="0" width="620" height="29" uuid="34997796-94b5-4596-9972-c7bde9f6eb1a"/>
 					<box>
 						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
+					<textElement textAlignment="Left" verticalAlignment="Middle">
 						<font fontName="TH SarabunPSK" size="14"/>
 					</textElement>
-					<textFieldExpression><![CDATA[$F{cow_medicine_name}]]></textFieldExpression>
+					<textFieldExpression><![CDATA["     "+$F{cow_medicine_name}]]></textFieldExpression>
 				</textField>
 			</frame>
 		</band>

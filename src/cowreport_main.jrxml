@@ -281,7 +281,7 @@
 					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
-				<imageExpression><![CDATA["E:/SpringWebMVC_JasperReport/src/pic/cow.png"]]></imageExpression>
+				<imageExpression><![CDATA["https://github.com/topkoka/jasper-report_zyanwoadev/blob/master/src/pic/cow.png?raw=true"]]></imageExpression>
 			</image>
 			<image>
 				<reportElement x="11" y="23" width="138" height="97" uuid="ebc23ce3-7023-44b8-aba6-0958f6e4a67e"/>
@@ -291,7 +291,7 @@
 					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
-				<imageExpression><![CDATA["E:/SpringWebMVC_JasperReport/src/pic/cow1.png"]]></imageExpression>
+				<imageExpression><![CDATA["https://github.com/topkoka/jasper-report_zyanwoadev/blob/master/src/pic/cow1.png?raw=true"]]></imageExpression>
 			</image>
 			<staticText>
 				<reportElement x="160" y="71" width="50" height="18" uuid="d564fad2-dd7e-499a-813a-5cd218a1ab82"/>
@@ -646,7 +646,7 @@
 				<subreportExpression><![CDATA[$P{Subreport_cowbirth_Parameter}]]></subreportExpression>
 			</subreport>
 			<subreport>
-				<reportElement x="400" y="2" width="402" height="10" uuid="e1e1b7c6-66fb-46e3-a8ca-c325f01de556"/>
+				<reportElement x="402" y="2" width="402" height="10" uuid="e1e1b7c6-66fb-46e3-a8ca-c325f01de556"/>
 				<dataSourceExpression><![CDATA[$P{SUBREPORT_cowVaccien_DATA_SOURCE}]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{Subreport_ cowVaccien_Parameter}]]></subreportExpression>
 			</subreport>
@@ -659,4 +659,26 @@
 			</subreport>
 		</band>
 	</detail>
+	<lastPageFooter>
+		<band height="20">
+			<staticText>
+				<reportElement x="122" y="0" width="250" height="20" uuid="899f0e76-becb-4954-b55f-3e07c6f52d36"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[© Copyright 2020. Zyntelligent Co., Ltd. All Rights Reserved.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="0" width="426" height="20" uuid="a627db0b-e4c2-452a-a662-e02d964121e6"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[( บัตรประจำตัวโคนม  ประจำฟาร์มเกษตกร  สำหรับเกษตรกร และ นักส่งเสริม )]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="119" height="20" uuid="9ed92015-94d2-4828-8c2c-34b429d13094"/>
+				<imageExpression><![CDATA["C:/Users/aditep/git/jasper-report_zyanwoadev/src/pic/logo1x.png"]]></imageExpression>
+			</image>
+		</band>
+	</lastPageFooter>
 </jasperReport>
