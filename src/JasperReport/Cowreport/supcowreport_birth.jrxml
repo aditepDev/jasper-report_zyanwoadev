@@ -48,7 +48,7 @@
 							<pen lineWidth="0.0" lineStyle="Dotted"/>
 						</box>
 						<rectangle>
-							<reportElement x="0" y="0" width="389" height="20" backcolor="#F0F8FF" uuid="a951b167-6a55-4a23-9462-9d6d306f2cac"/>
+							<reportElement x="0" y="0" width="389" height="20" backcolor="#A9CD9E" uuid="a951b167-6a55-4a23-9462-9d6d306f2cac"/>
 						</rectangle>
 						<staticText>
 							<reportElement x="0" y="0" width="389" height="20" uuid="ad63a3aa-e196-4252-86df-7683d3a61701"/>

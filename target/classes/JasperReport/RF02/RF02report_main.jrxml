@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.10.0.final using JasperReports Library version 6.10.0-unknown  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4_Landscape_1" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f1ffa432-cbb2-4fbc-8b06-5a6c2022cba4">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sample DB"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="0"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="1000"/>
+	<parameter name="ID" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[new Integer(1)]]></defaultValueExpression>
+	</parameter>
+	<parameter name="Subreport_cowbirth_Parameter" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="SUBREPORT_cowbirth_DATA_SOURCE" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="Subreport_cowbreeding_Parameter" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="SUBREPORT_cowbreeding_DATA_SOURCE" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="Subreport_ cowVaccien_Parameter" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="SUBREPORT_cowVaccien_DATA_SOURCE" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="Subreport_cowMedicine_Parameter" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="SUBREPORT_cowMedicine_DATA_SOURCE" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<queryString language="SQL">
+		<![CDATA[select farm_name,farm_id as farmid,farm_id_card,farm_address,member_id as memberid ,
+
+
+IFNULL((select member_lat from zyanwoadev.tb_member where member_id = memberid ),"-") as member_lat,
+
+IFNULL((select member_long from zyanwoadev.tb_member where member_id = memberid ) ,"-")as member_long,
+IFNULL((select member_name from zyanwoadev.tb_member where member_id = memberid)," ") as member_name,
+IFNULL((select member_surname from zyanwoadev.tb_member where member_id = memberid)," ") as member_surname,
+IFNULL((select coop_id from zyanwoadev.tbd_farm_coop where farm_id = farmid),"") as coopid , 
+IFNULL((select coop_name from zyanwoadev.tb_cooperative where tb_cooperative.coop_id = coopid),"") as coop_name 
+
+
+
+
+
+from zyanwoadev.tbd_farm where farm_id = $P{ID}]]>
+	</queryString>
+	<field name="farm_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="farm_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbd_farm"/>
+	</field>
+	<field name="farmid" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="farmid"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbd_farm"/>
+	</field>
+	<field name="farm_id_card" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="farm_id_card"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbd_farm"/>
+	</field>
+	<field name="farm_address" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="farm_address"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbd_farm"/>
+	</field>
+	<field name="memberid" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="memberid"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tbd_farm"/>
+	</field>
+	<field name="member_lat" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="member_lat"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+	</field>
+	<field name="member_long" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="member_long"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+	</field>
+	<field name="member_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="member_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+	</field>
+	<field name="member_surname" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="member_surname"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+	</field>
+	<field name="coopid" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="coopid"/>
+	</field>
+	<field name="coop_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="coop_name"/>
+	</field>
+	<background>
+		<band height="19">
+			<textField>
+				<reportElement x="720" y="0" width="51" height="19" uuid="0ff27b29-27e2-4117-ae41-245e1928197c"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["หน้า " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="770" y="0" width="51" height="19" uuid="8b9afe67-a6e0-474b-93ad-7f145c41fdf5"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" / " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</background>
+	<title>
+		<band height="156">
+			<staticText>
+				<reportElement x="0" y="0" width="802" height="40" uuid="5a287e70-b250-461f-b45c-4638da538147"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="27" isBold="true"/>
+				</textElement>
+				<text><![CDATA[รายงานประสิทธิภาพการผลิตของฟาร์มสมาชิก]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="582" y="80" width="60" height="20" uuid="130f8bcf-4585-4656-9a55-7d2e4775a5c1"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="TH SarabunPSK" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[วันที่วิเคราะห์
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="136" y="110" width="50" height="20" uuid="115a636e-223a-4595-aff4-fe1da3be5506"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="TH SarabunPSK" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ชื่อ - สกุล]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="366" y="110" width="40" height="20" uuid="2f0f005a-c72b-4017-8ca0-e04d8c06d107"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="TH SarabunPSK" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[เบอร์ถัง]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="492" y="110" width="30" height="20" uuid="2e761aaa-368b-4be6-85ca-5a333e2a379b"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="TH SarabunPSK" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ศูนย์ฯ
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="72" y="80" width="64" height="20" uuid="dc4eabb9-c9eb-49a1-97b6-ee5ae5519404"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="TH SarabunPSK" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ทะเบียนฟาร์ม]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="342" y="80" width="30" height="20" uuid="eeee4b3d-24a6-43e9-bd95-ccca00360031"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="TH SarabunPSK" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ที่อยู่]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="251" y="80" width="78" height="20" uuid="01947911-26ab-4928-88be-f57d549c2d9e"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="141" width="802" height="5" forecolor="#FFFFFF" backcolor="#84CB6F" uuid="bf843543-6dd9-435d-bcda-75870e760115"/>
+				<graphicElement>
+					<pen lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<textField>
+				<reportElement x="136" y="80" width="113" height="20" uuid="36d067ef-5ce4-40ba-a7d5-82b76ee5962d"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="TH SarabunPSK" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{farm_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="252" y="81" width="76" height="18" uuid="cf6b72fd-5751-49d6-b6d9-28be4f3af366"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="TH SarabunPSK" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{farm_id_card}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="372" y="80" width="200" height="20" uuid="14ba6ec1-07c9-489e-8a53-ac63d40eda5e"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="TH SarabunPSK" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{farm_address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="186" y="110" width="161" height="20" uuid="d5a42378-ed7f-4e8f-a8c2-a474e89a0788"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="TH SarabunPSK" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{member_name} + "   " + $F{member_surname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="406" y="110" width="50" height="20" uuid="1580d289-2891-4a28-b2de-93089ce394a7"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="TH SarabunPSK" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["024"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="522" y="110" width="230" height="20" uuid="d3a8891d-4642-4c19-81e3-1c3604677833"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="TH SarabunPSK" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ศูนย์รวบรวมน้ำนมดิบบรบือ"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="40" width="802" height="30" uuid="d87ef080-0c91-4e59-adf2-2383cca05d6d"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="TH SarabunPSK" size="24" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{coop_name}]]></textFieldExpression>
+			</textField>
+			<textField pattern=" d  MMMM yyyy">
+				<reportElement x="650" y="80" width="102" height="20" uuid="9263878e-0cf2-4cf7-9c6f-d9972c4cfb44"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="TH SarabunPSK" size="16" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="301" y="141" width="200" height="5" forecolor="#FFFFFF" backcolor="#707070" uuid="6abee9dd-4143-4e50-917a-51538f79b6fd">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="7"/>
+	</pageHeader>
+	<detail>
+		<band height="242">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+		</band>
+	</detail>
+	<lastPageFooter>
+		<band height="42">
+			<staticText>
+				<reportElement x="123" y="22" width="250" height="20" uuid="899f0e76-becb-4954-b55f-3e07c6f52d36"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[© Copyright 2020. Zyntelligent Co., Ltd. All Rights Reserved.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="376" y="22" width="426" height="20" uuid="a627db0b-e4c2-452a-a662-e02d964121e6"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[( รายงานประสิทธิภาพการผลิตของฟาร์มสมาชิก ประจำฟาร์มเกษตกร สำหรับเกษตรกร และ นักส่งเสริม )]]></text>
+			</staticText>
+			<image>
+				<reportElement x="1" y="22" width="119" height="20" uuid="9ed92015-94d2-4828-8c2c-34b429d13094"/>
+				<imageExpression><![CDATA["https://github.com/topkoka/jasper-report_zyanwoadev/blob/master/src/pic/logo1x.png?raw=true"]]></imageExpression>
+			</image>
+			<rectangle>
+				<reportElement x="0" y="0" width="802" height="10" forecolor="#FFFFFF" backcolor="#84CB6F" uuid="2f68301a-40be-45d0-9aa8-ffce757ab462">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="301" y="0" width="200" height="10" forecolor="#FFFFFF" backcolor="#707070" uuid="8f5bdaaa-65e4-4d1e-9f3a-c93a7bc381f7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+		</band>
+	</lastPageFooter>
+</jasperReport>

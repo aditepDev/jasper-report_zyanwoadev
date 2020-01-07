@@ -1,0 +1,1227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.10.0.final using JasperReports Library version 6.10.0-unknown  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PPLS_subreport" pageWidth="555" pageHeight="482" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="747ac041-24d3-405f-9784-68c92a292ec2">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<columnHeader>
+		<band height="40">
+			<frame>
+				<reportElement x="0" y="0" width="555" height="39" uuid="545c925f-a1d5-44d3-98e6-9b91f90d12db">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<rectangle>
+					<reportElement x="130" y="0" width="425" height="20" backcolor="#A9CD9E" uuid="7c3a3968-a948-4f03-b94e-45687ab4c41d">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.0"/>
+					</graphicElement>
+				</rectangle>
+				<rectangle>
+					<reportElement x="0" y="0" width="180" height="39" backcolor="#84CB6F" uuid="012564b5-ad71-4b7a-9d32-e89a19cd4b2a">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.0" lineColor="#5B3766"/>
+					</graphicElement>
+				</rectangle>
+				<staticText>
+					<reportElement x="1" y="0" width="179" height="39" forecolor="#000000" uuid="e79a012b-c6dd-4550-ab6d-f0d769802d56"/>
+					<box>
+						<pen lineColor="#000000"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="TH SarabunPSK" size="19" isBold="true"/>
+					</textElement>
+					<text><![CDATA[สัดส่วนฝูงโค]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="180" y="0" width="190" height="20" uuid="73ba820f-5fe1-4f43-8407-0bbce63413dc"/>
+					<box>
+						<bottomPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="TH SarabunPSK" size="16" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ฟาร์ม]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="370" y="0" width="185" height="20" uuid="3784d893-6bfc-4ded-b126-36574c45bfd4"/>
+					<box>
+						<bottomPen lineWidth="1.0"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="TH SarabunPSK" size="16" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ศูนย์/สหกรณ์]]></text>
+				</staticText>
+				<frame>
+					<reportElement x="180" y="20" width="375" height="19" uuid="d5af2e10-772b-4f1c-a4ac-40544e9df305">
+						<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.spreadsheet.SpreadsheetLayout"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<staticText>
+						<reportElement x="0" y="0" width="29" height="19" uuid="d2eb41eb-c003-4f40-a404-a654d23e0537"/>
+						<box>
+							<rightPen lineWidth="1.0"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="TH SarabunPSK" size="16" isBold="true"/>
+						</textElement>
+						<text><![CDATA[ตัว]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="29" y="0" width="161" height="19" uuid="a9befedd-2f07-4734-97a8-bb5336045a74"/>
+						<box>
+							<rightPen lineWidth="1.0"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="TH SarabunPSK" size="16" isBold="true"/>
+						</textElement>
+						<text><![CDATA[%]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="190" y="0" width="28" height="19" uuid="285286b9-9909-4743-910a-4930d8c36e60"/>
+						<box>
+							<rightPen lineWidth="1.0"/>
+						</box>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="TH SarabunPSK" size="16" isBold="true"/>
+						</textElement>
+						<text><![CDATA[ตัว]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="218" y="0" width="157" height="19" uuid="9235b579-f519-407a-84ab-6ae59eb86d3a"/>
+						<textElement textAlignment="Center" verticalAlignment="Middle">
+							<font fontName="TH SarabunPSK" size="16" isBold="true"/>
+						</textElement>
+						<text><![CDATA[%]]></text>
+					</staticText>
+				</frame>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="442">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<rectangle>
+				<reportElement x="0" y="222" width="555" height="20" forecolor="#FFFFFF" backcolor="#EBEBEB" uuid="8fd721c4-c7f3-4b62-b5f4-13352e04d1d0">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="122" width="555" height="20" forecolor="#FFFFFF" backcolor="#F0F0F0" uuid="3116163b-b478-4799-80fc-ac11d2b2aacb">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="1" width="555" height="41" forecolor="#000000" backcolor="#F0F0F0" uuid="c3740a14-5512-41f8-81bf-1a1be2a23918">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.0" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<frame>
+				<reportElement x="0" y="0" width="180" height="442" uuid="b3444567-250e-4737-941a-461e35ae9ac2">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<staticText>
+					<reportElement x="0" y="0" width="180" height="22" uuid="a3e7fc7c-68ea-4403-acd6-ce55ba51ecde"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="TH SarabunPSK" size="16" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ 1. โคทดแทนและแม่โคทั้งหมด]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="22" width="180" height="20" uuid="c978e38b-dc77-4d35-952b-e395d787dd9a"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="TH SarabunPSK" size="16" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ 1.1 แม่โค]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="42" width="180" height="20" uuid="50ee5faf-fca4-4d4d-8636-016eee88d5fd"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="TH SarabunPSK" size="16"/>
+					</textElement>
+					<text><![CDATA[   - โครีด, ท้อง]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="62" width="180" height="20" uuid="2b35893d-9ef6-4ebf-a2f0-fa7fc1226ddc"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="TH SarabunPSK" size="16"/>
+					</textElement>
+					<text><![CDATA[   - โครีด, ไม่ท้อง]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="82" width="180" height="20" uuid="8580f71e-64f4-4dcf-b8b8-88ded26819a9"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="TH SarabunPSK" size="16"/>
+					</textElement>
+					<text><![CDATA[   - โคดราย, ท้อง]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="102" width="180" height="20" uuid="7c6a325e-07b7-432d-a3c6-38912bc16909"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="TH SarabunPSK" size="16"/>
+					</textElement>
+					<text><![CDATA[   - โคดราย, ไม่ท้อง]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="122" width="180" height="20" uuid="6779d0cc-831e-4971-9aae-d54184c781a4"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="TH SarabunPSK" size="16" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ 1.2 โคทดแทน]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="142" width="180" height="20" uuid="592f09d2-c6a9-4543-b042-ffd89f70e1fc"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="TH SarabunPSK" size="16"/>
+					</textElement>
+					<text><![CDATA[   - โคสาว, ท้อง]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="162" width="180" height="20" uuid="5a042340-73aa-4164-976f-f55536a892eb"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="TH SarabunPSK" size="16"/>
+					</textElement>
+					<text><![CDATA[   - โคสาว, ผสม, ยังไม่ท้อง]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="182" width="180" height="20" uuid="badb614a-aa6a-404c-8751-2d26b517970c"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="TH SarabunPSK" size="16"/>
+					</textElement>
+					<text><![CDATA[   - โคสาว, ยังไม่ได้ผสม]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="202" width="180" height="20" uuid="909317eb-74f6-4540-96e4-de88f6a2d4a4"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="TH SarabunPSK" size="16"/>
+					</textElement>
+					<text><![CDATA[   - ลูกโคเพศเมีย]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="222" width="180" height="20" uuid="1ded8992-a3a5-49f6-9b8b-9f63dc430d93"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="TH SarabunPSK" size="16" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ 2. โคทั้งหมด]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="242" width="180" height="20" uuid="b89dec39-a5d4-439c-8df0-524a20a16b85"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="TH SarabunPSK" size="16"/>
+					</textElement>
+					<text><![CDATA[   - โครีด, ท้อง]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="262" width="180" height="20" uuid="18dc2c39-ce17-45af-9f46-3f78d949ffea"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="TH SarabunPSK" size="16"/>
+					</textElement>
+					<text><![CDATA[   - โครีด, ไม่ท้อง]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="282" width="180" height="20" uuid="4c369859-56d1-41fa-9eb0-f02a69eeb6db"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="TH SarabunPSK" size="16"/>
+					</textElement>
+					<text><![CDATA[   - โคดราย, ท้อง]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="302" width="180" height="20" uuid="df70b6dc-1ac3-4f12-be8d-3ed03b12bc89"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="TH SarabunPSK" size="16"/>
+					</textElement>
+					<text><![CDATA[   - โคดราย, ไม่ท้อง]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="322" width="180" height="20" uuid="2e966b1c-b5ab-43a0-a5b4-8968b2aafb72"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="TH SarabunPSK" size="16"/>
+					</textElement>
+					<text><![CDATA[   - โคสาว, ท้อง]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="342" width="180" height="20" uuid="5c586286-dede-454e-b33b-a5185a0ec270"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="TH SarabunPSK" size="16"/>
+					</textElement>
+					<text><![CDATA[   - โคสาว, ผสม, ยังไม่ท้อง]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="362" width="180" height="20" uuid="ee603727-abf1-4c65-8e68-95ff9807b07b"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="TH SarabunPSK" size="16"/>
+					</textElement>
+					<text><![CDATA[   - โคสาว, ยังไม่ได้ผสม]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="382" width="180" height="20" uuid="628e17db-2147-4258-8e0f-217e0140abd6"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="TH SarabunPSK" size="16"/>
+					</textElement>
+					<text><![CDATA[   - ลูกโคเพศเมีย]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="402" width="180" height="20" uuid="1b2a6d1e-7399-433f-9639-971eafbb506d"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="TH SarabunPSK" size="16"/>
+					</textElement>
+					<text><![CDATA[   - ลูกโคเพศผู้]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="422" width="180" height="20" uuid="171aa8fb-6be7-4cdb-9131-08f5271a57c2"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="TH SarabunPSK" size="16"/>
+					</textElement>
+					<text><![CDATA[   - พ่อโค]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="180" y="0" width="190" height="442" uuid="7e8d01a1-33d0-4b2d-9f18-2ff08ea31b08">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<frame>
+					<reportElement x="0" y="0" width="190" height="22" uuid="3debd100-bd9f-4b2b-85d5-aec7d0ae8f40">
+						<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.spreadsheet.SpreadsheetLayout"/>
+					</reportElement>
+					<textField>
+						<reportElement x="0" y="0" width="29" height="22" uuid="8fbbede8-256e-41aa-9d7c-3749a2d6f055"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["39"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="29" y="0" width="161" height="22" uuid="8c9c342a-2537-4a77-9b4e-be80ec6466aa"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["100.00"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="22" width="190" height="20" uuid="cc6bf2f2-f45f-49a0-9254-ddcb945d402f"/>
+					<textField>
+						<reportElement x="0" y="0" width="29" height="20" uuid="1c6db99b-7aff-4c88-b0e1-d1f71d4ba814"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["30"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="29" y="0" width="161" height="20" uuid="ea0b5570-7c04-4873-afd7-13fe5a109132"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["76.92"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="42" width="190" height="20" uuid="d78c1f1f-fc73-47f6-b81a-059ee9256aa9"/>
+					<textField>
+						<reportElement x="0" y="0" width="29" height="20" uuid="bcec233c-9579-4926-84b1-d72dc3714906"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["0"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="29" y="0" width="161" height="20" uuid="2e67f700-72c6-4758-aae2-01b69a2eadf0"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["0.0000"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="62" width="190" height="20" uuid="832f761a-d0eb-4a36-8776-fb87f46b99c8"/>
+					<textField>
+						<reportElement x="0" y="0" width="29" height="20" uuid="c374fdc2-555e-45ee-90e0-8bf54746f319"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["23"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="29" y="0" width="161" height="20" uuid="eb0a0929-497e-4559-860a-ad4b347604e8"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["76.6667"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="82" width="190" height="20" uuid="6216e60f-e8a9-4c99-b011-65d40e88bd25"/>
+					<textField>
+						<reportElement x="0" y="0" width="29" height="20" uuid="1549bc43-dd4e-48ed-bb40-e7276d2e4ec7"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["4"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="29" y="0" width="161" height="20" uuid="b9bcf339-e8a2-40a7-9065-8f961b123a88"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["13.3333"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="102" width="190" height="20" uuid="686da40f-2ada-48f4-a3b7-e7bfefc41b51"/>
+					<textField>
+						<reportElement x="0" y="0" width="29" height="20" uuid="e8273553-cfd6-48e6-84d3-2a3e773b3b8d"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["3"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="29" y="0" width="161" height="20" uuid="7ae008cd-9cb5-4227-b947-5145f9e3a2dd"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["10.0000"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="122" width="190" height="20" uuid="73b1a94f-ed50-4ba0-89e0-9bb609ec0ef4"/>
+					<textField>
+						<reportElement x="0" y="0" width="29" height="20" uuid="48e43cc1-9639-4844-9172-74500d46318e"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["9"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="29" y="0" width="161" height="20" uuid="7fd2f07e-31fa-4269-bbf6-296f83c222e3"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["23"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="142" width="190" height="20" uuid="007585d5-abc1-4cbb-9a3e-dfeb816b860c"/>
+					<textField>
+						<reportElement x="0" y="0" width="29" height="20" uuid="7f439e95-ecee-4ae1-a0bf-276c4dfd6a5f"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["4"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="29" y="0" width="161" height="20" uuid="d32317e5-4100-4bcd-9542-fb071d4091c1"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["44444"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="162" width="190" height="20" uuid="847520f3-3208-4eec-8f71-9f80c036bd2d"/>
+					<textField>
+						<reportElement x="0" y="0" width="29" height="20" uuid="de0380a5-c723-414e-83de-07398a09c194"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["1"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="29" y="0" width="161" height="20" uuid="e4984e65-6296-46af-8b64-5fa440adce5e"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["11.1111"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="182" width="190" height="20" uuid="c2526184-fc0a-4efd-addb-8b4b9e7c4d5b"/>
+					<textField>
+						<reportElement x="0" y="0" width="29" height="20" uuid="284fe69b-0260-444c-85ef-94a178f7746a"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["4"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="29" y="0" width="161" height="20" uuid="5b6c6585-9827-47e9-b94c-366a5938131d"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["444444"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="202" width="190" height="20" uuid="93d7230b-0027-44ee-b52b-53605348bb5a"/>
+					<textField>
+						<reportElement x="0" y="0" width="29" height="20" uuid="302c9e4c-3a92-47f4-b9e5-8b851ebcfdd3"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA[" "]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="29" y="0" width="161" height="20" uuid="83f4f453-bcf0-4cf1-967a-b0250b5b36ab"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA[" "]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="222" width="190" height="20" uuid="1d09ede9-7628-46aa-b44d-6effa576fc00"/>
+					<textField>
+						<reportElement x="0" y="0" width="29" height="20" uuid="9ba56666-c71f-450f-8dde-c9f72e502808"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["60"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="29" y="0" width="161" height="20" uuid="f4756839-7590-4737-b94a-5f9503f9ed08"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["100.00"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="242" width="190" height="20" uuid="f157ca88-0104-4bc1-9795-af9c13de4ecb"/>
+					<textField>
+						<reportElement x="0" y="0" width="29" height="20" uuid="2b5584d2-ce45-49bb-add7-922402348d1c"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["0"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="29" y="0" width="161" height="20" uuid="015530bb-0fd6-4642-8878-8ab59db05731"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["0.000"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="262" width="190" height="20" uuid="e216a386-05d3-413a-b73e-0b2c532754a5"/>
+					<textField>
+						<reportElement x="0" y="0" width="29" height="20" uuid="301c210b-c012-48b2-ac23-733c04a8904a"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["23"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="29" y="0" width="161" height="20" uuid="045f99ac-1112-4de0-a365-904f8d5eeaaf"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["38.3333"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="282" width="190" height="20" uuid="dcadbea8-fd1a-46bd-b639-34409a2fad16"/>
+					<textField>
+						<reportElement x="0" y="0" width="29" height="20" uuid="b95f47d4-f83c-4737-a598-30a4a6c7bb66"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["4"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="29" y="0" width="161" height="20" uuid="ca6556f4-2b67-47ba-8606-ff53e3e81618"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["6.6667"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="302" width="190" height="20" uuid="c94fed68-507f-434c-aa37-1cf58e141792"/>
+					<textField>
+						<reportElement x="0" y="0" width="29" height="20" uuid="9f5c74a9-6b0b-4642-b4b9-ee9f7c599b99"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["3"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="29" y="0" width="161" height="20" uuid="ca4fe0ea-181f-41ac-b1a8-d9b5f955166e"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["5.0000"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="322" width="190" height="20" uuid="e51928c2-7c95-4ef5-a7bd-f6eb18aec48c"/>
+					<textField>
+						<reportElement x="0" y="0" width="29" height="20" uuid="0e687d8f-7af4-43fc-b489-f5b68bacd057"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["4"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="29" y="0" width="161" height="20" uuid="aedb0ff0-4b61-4133-b06f-95e0d7bd1c24"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["6.6667"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="342" width="190" height="20" uuid="40345b9a-87f7-408d-9066-5b45f5edac68"/>
+					<textField>
+						<reportElement x="0" y="0" width="29" height="20" uuid="592ac9d8-a8ac-4e2d-bc53-a365f9a35746"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["1"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="29" y="0" width="161" height="20" uuid="c3dd1d63-b6d2-43ae-9e70-0d7707d32af2"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["1.6667"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="362" width="190" height="20" uuid="af2b8dac-43ba-4597-8e89-2c3895d73da5"/>
+					<textField>
+						<reportElement x="0" y="0" width="29" height="20" uuid="93e30039-df54-4aeb-a92e-e487d87c09cf"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["4"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="29" y="0" width="161" height="20" uuid="ee6229eb-4d1a-457a-ba74-b963e5fbd30d"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["6.6667"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="382" width="190" height="20" uuid="5225f838-6b64-4029-bb9e-593b7682ec21"/>
+					<textField>
+						<reportElement x="0" y="0" width="29" height="20" uuid="05151f7b-b653-4f20-a7a2-47ab2b8768a4"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["18"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="29" y="0" width="161" height="20" uuid="f18db1f2-dc15-45e9-9171-7a22c88d0699"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["30.0000"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="402" width="190" height="20" uuid="beb377c2-ca68-47d1-b346-d9fad6b05e0a"/>
+					<textField>
+						<reportElement x="0" y="0" width="29" height="20" uuid="089a8566-2953-45ae-9d9e-549c0f2b7014"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["3"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="29" y="0" width="161" height="20" uuid="2264a078-6867-414d-b8a3-198370db8594"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["5.0000"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="422" width="190" height="20" uuid="d924f109-2757-48be-8f49-1417444a7b95"/>
+					<textField>
+						<reportElement x="0" y="0" width="29" height="20" uuid="737fc135-7b75-489a-b886-71612c8177fa"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["0"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="29" y="0" width="161" height="20" uuid="65163074-7b00-411d-9fd1-8e2fa00ac757"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["0.0000"]]></textFieldExpression>
+					</textField>
+				</frame>
+			</frame>
+			<frame>
+				<reportElement x="370" y="0" width="185" height="442" uuid="05320363-8f2e-45cf-afd0-dedb19e81eca">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<frame>
+					<reportElement x="0" y="122" width="185" height="20" uuid="a7c013db-a1b1-4905-9123-e5b0d18adb1f"/>
+					<textField>
+						<reportElement x="0" y="0" width="28" height="20" uuid="ede58dc6-fcbd-475c-b3af-d1ce1dca87ec"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["691"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="28" y="0" width="157" height="20" uuid="f753403e-47b4-48ab-bca3-345536bab99a"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["30.16"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="0" width="185" height="22" uuid="0eebd070-bec6-4096-85a8-03b37da57581"/>
+					<textField>
+						<reportElement x="0" y="0" width="28" height="22" uuid="0f411e9b-fdc0-41e2-8711-54949d9b1248"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["2291"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="28" y="0" width="157" height="22" uuid="778f8000-472d-4059-90b3-0fd88cea0b28"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["100.0"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="382" width="185" height="20" uuid="7dec5759-fb0d-412e-b0a9-f892154a831f"/>
+					<textField>
+						<reportElement x="0" y="0" width="28" height="20" uuid="1a7f95f7-66f8-4d4d-80dd-a13e948215ee"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["513"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="28" y="0" width="157" height="20" uuid="f06302d5-5bcb-4cc1-88cb-3eb3ee2410dc"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["17.2669"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="302" width="185" height="20" uuid="6729c810-374e-474b-99e1-c74f02ab0354"/>
+					<textField>
+						<reportElement x="0" y="0" width="28" height="20" uuid="291fb524-66a2-422f-b216-9e8db3a8e7ae"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["68"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="28" y="0" width="157" height="20" uuid="5e44b546-f17f-4870-a00d-a72ba0c25774"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["2.2888"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="242" width="185" height="20" uuid="0e1d71d8-9cfb-4dff-80ad-a9d570a38cc9"/>
+					<textField>
+						<reportElement x="0" y="0" width="28" height="20" uuid="2f53882e-43da-4c83-9f33-dce7b662341a"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["110"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="28" y="0" width="157" height="20" uuid="baee8b90-9b9d-45a6-afa5-7f4b31c55198"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["3.7025"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="102" width="185" height="20" uuid="d4023a7d-bc00-4d78-ab80-ceca7ce93a79"/>
+					<textField>
+						<reportElement x="0" y="0" width="28" height="20" uuid="f020b698-e2a7-4db1-afc0-65a770c000dc"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["68"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="28" y="0" width="157" height="20" uuid="95265f02-5f88-49d8-8df3-f0d8e64a7980"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["4.2500"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="202" width="185" height="20" uuid="e2d0840b-a284-4775-b945-4b6d0468a8b5"/>
+					<textField>
+						<reportElement x="0" y="0" width="28" height="20" uuid="aabdcad3-3940-4d99-9588-c827ad65b5b0"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA[" "]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="28" y="0" width="157" height="20" uuid="2ebb4782-72ca-4d3f-8060-09b06f0790d9"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA[" "]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="342" width="185" height="20" uuid="b333b7ac-8ee0-4c3e-9db9-8c85782c1274"/>
+					<textField>
+						<reportElement x="0" y="0" width="28" height="20" uuid="0dc50b5e-212f-4a18-835b-7dde8656aa8a"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["80"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="28" y="0" width="157" height="20" uuid="64f8ddd1-11fb-4f6d-8006-a015ca06d6b4"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["2.6927"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="422" width="185" height="20" uuid="31b35d14-8e23-4334-a3de-4009ecdbe2c8"/>
+					<textField>
+						<reportElement x="0" y="0" width="28" height="20" uuid="1695ce5e-78a6-458f-b3ed-5578ede0c861"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["28"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="28" y="0" width="157" height="20" uuid="786d5b9d-7936-446e-b532-ae1540490558"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["0.9424"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="402" width="185" height="20" uuid="2988d903-596e-404a-8d26-d698275708cf"/>
+					<textField>
+						<reportElement x="0" y="0" width="28" height="20" uuid="c7f09bac-1924-4454-90ad-11a26834b4ff"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["139"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="28" y="0" width="157" height="20" uuid="ffaf008b-55cf-4d23-8540-54130a978699"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["4.6786"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="182" width="185" height="20" uuid="191fc64f-bfab-4313-a27f-15b5bc2580e2"/>
+					<textField>
+						<reportElement x="0" y="0" width="28" height="20" uuid="4f7ae91d-042e-404e-b9c2-8553f5a96f99"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["226"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="28" y="0" width="157" height="20" uuid="a254fbd7-cfd3-440c-9819-bcd363e10ac3"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["32.7062"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="362" width="185" height="20" uuid="1c02e44b-4fa9-4ae1-a0ae-29b7c8b3e44a"/>
+					<textField>
+						<reportElement x="0" y="0" width="28" height="20" uuid="1db97ec0-cedc-4aa4-bd9b-680d71a2079f"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["226"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="28" y="0" width="157" height="20" uuid="c5c4e20e-4f1a-4837-b64d-e6606475e542"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["7.6069"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="262" width="185" height="20" uuid="51c8dc0d-62a2-4a32-a4ee-f67c77ee366b"/>
+					<textField>
+						<reportElement x="0" y="0" width="28" height="20" uuid="848d0785-4683-45db-b59f-319552028c6d"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["1295"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="28" y="0" width="157" height="20" uuid="4de8a13d-fb2d-4462-ab7e-e40a7df7c760"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["43.5880"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="22" width="185" height="20" uuid="a0a33c3c-be4a-4e71-81b1-6711f583a33d"/>
+					<textField>
+						<reportElement x="0" y="0" width="28" height="20" uuid="17cb8cee-5983-48f3-bfaf-922f867942ac"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["1600"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="28" y="0" width="157" height="20" uuid="0f28f89b-e79e-4a84-a768-2405a91fd909"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["68.84"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="82" width="185" height="20" uuid="86f2913f-9b83-4ef2-8094-12941fb0983b"/>
+					<textField>
+						<reportElement x="0" y="0" width="28" height="20" uuid="d1182787-2f4f-482e-8518-5d9109aa1ec8"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["127"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="28" y="0" width="157" height="20" uuid="06173f6a-cd4f-45e2-b4ac-42b8b3a6bb93"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["7.9375"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="42" width="185" height="20" uuid="0fc220fe-e353-4b77-a91f-4ad34c768b95"/>
+					<textField>
+						<reportElement x="0" y="0" width="28" height="20" uuid="b46a85e6-ace6-415d-9877-44cae8d8c378"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["110"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="28" y="0" width="157" height="20" uuid="0972b5f9-b555-471f-a70a-09f78e1c138c"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["6.8750"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="282" width="185" height="20" uuid="4437c7d0-9ee1-40f4-8959-ecd79c4d5ab6"/>
+					<textField>
+						<reportElement x="0" y="0" width="28" height="20" uuid="d7313926-6add-40e3-9fcf-3529c53d885e"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["127"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="28" y="0" width="157" height="20" uuid="404fd9b0-2b4b-4bb5-abd3-a218224eeea7"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["4.2747"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="62" width="185" height="20" uuid="1bf29e63-5c5a-4a7e-aa65-d48507ad40bf"/>
+					<textField>
+						<reportElement x="0" y="0" width="28" height="20" uuid="d92c7025-9a26-4825-8d62-a751238f8427"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["1295"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="28" y="0" width="157" height="20" uuid="620e6530-8d6d-4bd3-b395-7ee5c9493179"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["80.9375"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="162" width="185" height="20" uuid="44bdef77-6e6a-4006-bfc4-c8de97e8575a"/>
+					<textField>
+						<reportElement x="0" y="0" width="28" height="20" uuid="12dd3f3c-849b-4b1c-89ee-493878ce0460"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["80"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="28" y="0" width="157" height="20" uuid="53c39f5b-01a2-473b-b83b-e93ebef23738"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["11.5774"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="322" width="185" height="20" uuid="1d86a83e-e086-4fe0-892a-cdb652bc48c4"/>
+					<textField>
+						<reportElement x="0" y="0" width="28" height="20" uuid="39ea7a6c-7e33-429a-ac5c-12e9bebd4281"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["385"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="28" y="0" width="157" height="20" uuid="1c604e44-f5e8-4edc-bb1d-741f6e68612d"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["12.9586"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="142" width="185" height="20" uuid="fe83e473-32d4-4750-b7e4-46556d57d0ef"/>
+					<textField>
+						<reportElement x="0" y="0" width="28" height="20" uuid="b7ce8571-84de-41bf-8cc2-39c128c4da02"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["385"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="28" y="0" width="157" height="20" uuid="fafbbba8-47e2-4978-94e8-eec6ec008ee3"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["55.7164"]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement x="0" y="222" width="185" height="20" uuid="e067b34b-3b16-4adb-84d4-ffe4a0566e73"/>
+					<textField>
+						<reportElement x="0" y="0" width="28" height="20" uuid="c3819894-6abe-46e9-9a54-f21f6827c0e1"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["2971"]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement x="28" y="0" width="157" height="20" uuid="51dd113f-0eef-48bd-a2b1-5a85012e3b50"/>
+						<textElement textAlignment="Center">
+							<font fontName="TH SarabunPSK" size="16"/>
+						</textElement>
+						<textFieldExpression><![CDATA["100.00"]]></textFieldExpression>
+					</textField>
+				</frame>
+			</frame>
+		</band>
+	</detail>
+</jasperReport>

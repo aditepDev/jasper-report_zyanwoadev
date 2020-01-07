@@ -41,7 +41,6 @@ response.setContentType("text/html;charset=UTF-8");
 		
 		Database db = new Database();
 		int id = 10;
-		int typecowreport = 0;
 		JasperPrint jasperPrint = null;
 
 		try {
@@ -49,12 +48,11 @@ response.setContentType("text/html;charset=UTF-8");
 			  
 
 			cowreportDAO cowrDAO = new cowreportDAO(db);
-			typecowreport = Integer.parseInt(request.getParameter("cow"));
 			id = Integer.parseInt(request.getParameter("cow_id"));
 
 			
 			ArrayList<HashMap<String, Object>> cowrList = cowrDAO.FindAllbyID(id);
-			ArrayList<HashMap<String, Object>> cowrList2 = cowrDAO.FindCowBreeding(id);
+			ArrayList<HashMap<String, Object>> CowBreeding = cowrDAO.FindCowBreeding(id);
 			ArrayList<HashMap<String, Object>> cowbirth = cowrDAO.FindCowBirth(id);
 			ArrayList<HashMap<String, Object>> cowVaccien = cowrDAO.FindCowVaccien(id);
 			ArrayList<HashMap<String, Object>> cowMedicine = cowrDAO.FindCowMedicine(id);
@@ -62,24 +60,10 @@ response.setContentType("text/html;charset=UTF-8");
 			for (int i = 0; i < cowbirth.size(); i++) {
 				System.out.println(cowbirth.get(i).get("cow_name")+" "+cowbirth.get(i).get("cow_sex"));
 			}
-//			System.out.println(cowrList.get("cow_ids"));
-//			ArrayList<cowreportModel> cowrList =  cowrDAO.FindAll();
-				
-//			System.out.println("id = "+id);
-//
-//			ArrayList<Object> model = new ArrayList<Object>();
-//			String reportFileName = null;
-//			if(typecowreport == 0) {
-////				model.addAll(cowrList);
-//				reportFileName = "cowreport.jrxml";
-//			}else {
-////				model.addAll(cowrthaiList);
-//				reportFileName = "cowreport_thailand.jrxml";
-//				}
-//			System.out.println(model);
-//			
+			
+		
 			db.close();
-			String Pathfile = "C:\\Users\\aditep\\git\\jasper-report_zyanwoadev\\src\\";
+			String Pathfile = "C:\\Users\\aditep\\git\\jasper-report_zyanwoadev\\src\\JasperReport\\Cowreport\\";
 			// path
 			String reportFileName = "cowreport_main.jrxml"; //test reportFileName
 			String reportPath = Pathfile + reportFileName;
@@ -91,7 +75,7 @@ response.setContentType("text/html;charset=UTF-8");
 			
 			String supcowreport_cow_vaccienFileName = "supcowreport_cow_vaccien.jrxml"; 
 			String supcowreport_cow_vaccienPath = Pathfile + supcowreport_cow_vaccienFileName;
-
+			
 			String supcowreport_cowbirthFileName = "supcowreport_birth.jrxml";
 			String supcowreport_cowbirthPath = Pathfile + supcowreport_cowbirthFileName;
 
@@ -106,10 +90,41 @@ response.setContentType("text/html;charset=UTF-8");
 			
 			
 			JRBeanCollectionDataSource dataSource = new JRBeanCollectionDataSource(cowrList);	
-			JRBeanCollectionDataSource supcowreport_breedingDataSource = new JRBeanCollectionDataSource(cowrList2);
+			JRBeanCollectionDataSource supcowreport_breedingDataSource = new JRBeanCollectionDataSource(CowBreeding);
 			JRBeanCollectionDataSource supcowreport_cowbirthDataSource = new JRBeanCollectionDataSource(cowbirth);
 			JRBeanCollectionDataSource supcowreport_cow_vaccienDataSource = new JRBeanCollectionDataSource(cowVaccien);
 			JRBeanCollectionDataSource supcowreport_cowMedicineDataSource = new JRBeanCollectionDataSource(cowMedicine);
+			
+			
+			System.out.println("CowBreeding : "+CowBreeding.size());
+			if (CowBreeding.size() == 0) {
+				supcowreport_breedingtFileName = "supcowreport_Nobreeding.jrxml"; 
+				supcowreport_breedingPath = Pathfile + supcowreport_breedingtFileName;
+				supcowreport_breedingParameter  = JasperCompileManager.compileReport(supcowreport_breedingPath);
+				supcowreport_breedingDataSource = new JRBeanCollectionDataSource(cowrList);
+			}
+			System.out.println("cowMedicine : "+cowMedicine.size());
+			if (cowMedicine.size() == 0) {
+				supcowreport_cowMedicineFileName = "supcowreport_Nocow_medicine.jrxml";
+				supcowreport_cowMedicinePath = Pathfile + supcowreport_cowMedicineFileName;
+				supcowreport_cowMedicineParameter = JasperCompileManager.compileReport(supcowreport_cowMedicinePath);
+				supcowreport_cowMedicineDataSource = new JRBeanCollectionDataSource(cowrList);
+			}
+			
+			System.out.println("cowbirth : "+cowbirth.size());
+			if (cowbirth.size() == 0) {
+				supcowreport_cowbirthFileName = "supcowreport_Nobirth.jrxml";
+				supcowreport_cowbirthPath = Pathfile + supcowreport_cowbirthFileName;
+				supcowreport_cowbirthParameter = JasperCompileManager.compileReport(supcowreport_cowbirthPath);
+				supcowreport_cowbirthDataSource = new JRBeanCollectionDataSource(cowrList);
+			}
+			System.out.println("cowVaccien : "+cowVaccien.size());
+			if (cowVaccien.size() == 0) {
+				supcowreport_cow_vaccienFileName = "supcowreport_Nocow_vaccien.jrxml"; 
+				supcowreport_cow_vaccienPath = Pathfile + supcowreport_cow_vaccienFileName;
+				supcowreport_cow_vaccienParameter = JasperCompileManager.compileReport(supcowreport_cow_vaccienPath);
+				supcowreport_cow_vaccienDataSource = new JRBeanCollectionDataSource(cowrList);
+			}
 			
 			 Map<String, Object> parameters = new HashMap<>();
 		        parameters.put("ID", id);

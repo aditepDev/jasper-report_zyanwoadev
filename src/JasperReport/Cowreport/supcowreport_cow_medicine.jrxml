@@ -55,7 +55,7 @@
 							<pen lineWidth="0.0" lineStyle="Dotted"/>
 						</box>
 						<rectangle>
-							<reportElement x="0" y="0" width="790" height="20" backcolor="#F0F8FF" uuid="0b2b8a92-3e0b-4d8a-b2f9-9767f9a16fb9"/>
+							<reportElement x="0" y="0" width="790" height="20" backcolor="#A9CD9E" uuid="0b2b8a92-3e0b-4d8a-b2f9-9767f9a16fb9"/>
 						</rectangle>
 						<staticText>
 							<reportElement x="0" y="0" width="790" height="20" uuid="ad63a3aa-e196-4252-86df-7683d3a61701"/>
