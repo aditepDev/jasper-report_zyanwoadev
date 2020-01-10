@@ -3,7 +3,7 @@ JDBC mariadb 2.5.2
 Database test 
 # jasper-report_zyanwoadev
 
-## pom
+## pom.xml  (ติดตั้ง jasperreports)
 ```
 <!-- https://mvnrepository.com/artifact/net.sf.jasperreports/jasperreports 
 <dependency>
