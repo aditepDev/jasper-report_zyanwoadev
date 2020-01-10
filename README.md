@@ -50,10 +50,11 @@ new java.text.SimpleDateFormat("d MMM yy", new Locale("TH","th")).format(new Dat
 )
 ```
 ## Subreport parameter
-``` jrxml
+``` xml
 	<parameter name="Subreport_cowbirth_Parameter" class="net.sf.jasperreports.engine.JasperReport"/>
 	<parameter name="SUBREPORT_cowbirth_DATA_SOURCE" class="net.sf.jasperreports.engine.JRDataSource"/>
 	
+	<---------------------------------------------------------------------------------------------------------->
 	<subreport>
 	<reportElement x="0" y="2" width="802" height="11" uuid="666c9f60-835a-4742-ba9b-db26fc42d422">
 		<property name="com.jaspersoft.studio.unit.width" value="px"/>
@@ -63,3 +64,51 @@ new java.text.SimpleDateFormat("d MMM yy", new Locale("TH","th")).format(new Dat
 	</subreport>
 
 ```
+```java
+	try {
+	
+	JasperPrint jasperPrint = null;
+	cowreportDAO cowrDAO = new cowreportDAO(db);
+	ArrayList<HashMap<String, Object>> cowrList = cowrDAO.FindAllbyID(cow_id);
+	
+	
+	// path
+	String Pathfile = "C:\\Users\\aditep\\git\\zcoop\\src\\JasperReport\\Cowreport\\";
+	String reportFileName = "cowreport_main.jrxml"; // test reportFileName
+	String reportPath = Pathfile + reportFileName;
+	String targetFileName = reportFileName.replace(".jrxml", ".pdf");
+
+	
+	supcowreport_breedingtFileName = "supcowreport_breeding.jrxml";
+	supcowreport_breedingPath = Pathfile + supcowreport_breedingtFileName;
+	supcowreport_breedingParameter = JasperCompileManager.compileReport(supcowreport_breedingPath);
+	supcowreport_breedingDataSource = new JRBeanCollectionDataSource(cowrList);
+	
+	
+	Map<String, Object> parameters = new HashMap<>();
+				parameters.put("ID", cow_id);
+				parameters.put("Subreport_cowbreeding_Parameter", supcowreport_breedingParameter);
+				parameters.put("SUBREPORT_cowbreeding_DATA_SOURCE", supcowreport_breedingDataSource);
+	
+	
+	jasperPrint = JasperFillManager.fillReport(jasperReport, parameters, dataSource);
+
+	ServletOutputStream outputstream = response.getOutputStream();
+	ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+	JasperExportManager.exportReportToPdfStream(jasperPrint, byteArrayOutputStream);
+	response.setContentType("application/pdf");
+	outputstream.write(byteArrayOutputStream.toByteArray());
+	response.setHeader("Cache-Control", "max-age=0");
+	response.setHeader("Content-Disposition", "attachment; filename=" + targetFileName);
+	
+	// exportReportToPdfFile
+	String path = "C:\\Users\\aditep\\desktop";
+	JasperExportManager.exportReportToPdfFile(jasperPrint, path + "\\employees.pdf");
+	outputstream.flush();
+	utputstream.close()
+	} catch (JRException e) {
+			e.printStackTrace();
+		}
+```
+
+
