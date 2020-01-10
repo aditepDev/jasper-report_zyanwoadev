@@ -107,6 +107,8 @@ new java.text.SimpleDateFormat("d MMM yy", new Locale("TH","th")).format(new Dat
 	// exportReportToPdfFile
 	String path = "C:\\Users\\aditep\\desktop";
 	JasperExportManager.exportReportToPdfFile(jasperPrint, path + "\\employees.pdf");
+	
+	
 	outputstream.flush();
 	utputstream.close()
 	} catch (JRException e) {
