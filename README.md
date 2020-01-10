@@ -77,8 +77,11 @@ new java.text.SimpleDateFormat("d MMM yy", new Locale("TH","th")).format(new Dat
 	String reportFileName = "cowreport_main.jrxml"; // test reportFileName
 	String reportPath = Pathfile + reportFileName;
 	String targetFileName = reportFileName.replace(".jrxml", ".pdf");
-
 	
+	// main report
+	JRBeanCollectionDataSource dataSource = new JRBeanCollectionDataSource(cowrList);
+	
+	// subreport
 	supcowreport_breedingtFileName = "supcowreport_breeding.jrxml";
 	supcowreport_breedingPath = Pathfile + supcowreport_breedingtFileName;
 	supcowreport_breedingParameter = JasperCompileManager.compileReport(supcowreport_breedingPath);
