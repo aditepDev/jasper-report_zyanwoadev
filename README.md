@@ -3,7 +3,7 @@ JDBC mariadb 2.5.2
 Database test 
 # jasper-report_zyanwoadev
 
-แปลงวันที่  
+## แปลงวันที่  
 ```java 
 new java.text.SimpleDateFormat("d MMM yy", new Locale("TH","th")).format(new Date())
 ```
@@ -48,4 +48,18 @@ new java.text.SimpleDateFormat("d MMM yy", new Locale("TH","th")).format(new Dat
 (Integer.parseInt(($F{cow_breeding_log_date}.substring(0,4)))+543
 	
 )
+```
+## Subreport parameter
+``` jrxml
+	<parameter name="Subreport_cowbirth_Parameter" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="SUBREPORT_cowbirth_DATA_SOURCE" class="net.sf.jasperreports.engine.JRDataSource"/>
+	
+	<subreport>
+	<reportElement x="0" y="2" width="802" height="11" uuid="666c9f60-835a-4742-ba9b-db26fc42d422">
+		<property name="com.jaspersoft.studio.unit.width" value="px"/>
+	</reportElement>
+	<dataSourceExpression><![CDATA[$P{SUBREPORT_cowbreeding_DATA_SOURCE}]]></dataSourceExpression>
+	<subreportExpression><![CDATA[$P{Subreport_cowbreeding_Parameter}]]></subreportExpression>
+	</subreport>
+
 ```
