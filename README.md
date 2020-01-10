@@ -63,6 +63,44 @@ new java.text.SimpleDateFormat("d MMM yy", new Locale("TH","th")).format(new Dat
 	
 )
 ```
+## JasperReport - Java
+```java
+try {
+	
+	JasperPrint jasperPrint = null;
+	// data
+	cowreportDAO cowrDAO = new cowreportDAO(db);
+	ArrayList<HashMap<String, Object>> cowrList = cowrDAO.FindAllbyID(cow_id);
+	
+	// path
+	String Pathfile = "C:\\Users\\aditep\\git\\zcoop\\src\\JasperReport\\Cowreport\\";
+	String reportFileName = "cowreport_main.jrxml"; // test reportFileName
+	String reportPath = Pathfile + reportFileName;
+	String targetFileName = reportFileName.replace(".jrxml", ".pdf");
+	
+	// add path
+	JasperReport jasperReport = JasperCompileManager.compileReport(reportPath);
+	
+	// main report
+	JRBeanCollectionDataSource dataSource = new JRBeanCollectionDataSource(cowrList);
+	
+	
+	jasperPrint = JasperFillManager.fillReport(jasperReport, null, dataSource);
+
+	ServletOutputStream outputstream = response.getOutputStream();
+	ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+	JasperExportManager.exportReportToPdfStream(jasperPrint, byteArrayOutputStream);
+	response.setContentType("application/pdf");
+	outputstream.write(byteArrayOutputStream.toByteArray());
+	response.setHeader("Cache-Control", "max-age=0");
+	response.setHeader("Content-Disposition", "attachment; filename=" + targetFileName);
+	
+	outputstream.flush();
+	utputstream.close()
+	} catch (JRException e) {
+			e.printStackTrace();
+		}
+```
 ## Subreport parameter
 ``` xml
 	<parameter name="Subreport_cowbirth_Parameter" class="net.sf.jasperreports.engine.JasperReport"/>
