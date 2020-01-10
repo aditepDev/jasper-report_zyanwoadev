@@ -133,6 +133,7 @@ new java.text.SimpleDateFormat("d MMM yy", new Locale("TH","th")).format(new Dat
 		}
 ```
 ## jasper report parameter
+#### jrxml
 ``` xml 
 	<parameter name="start" class="java.lang.String"/>
 	<parameter name="farmID" class="java.lang.Integer"/
@@ -141,6 +142,7 @@ new java.text.SimpleDateFormat("d MMM yy", new Locale("TH","th")).format(new Dat
    <textFieldExpression><![CDATA[$P{cowRolledNC}]]></textFieldExpression>
 			</textField>
 ```
+#### java.class
 ``` java
  Map<String, Object> parameters = new HashMap<>();
 	 parameters.put("farmID", farmId);
