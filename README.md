@@ -3,6 +3,16 @@ JDBC mariadb 2.5.2
 Database test 
 # jasper-report_zyanwoadev
 
+## pom
+```
+<!-- https://mvnrepository.com/artifact/net.sf.jasperreports/jasperreports 
+<dependency>
+    <groupId>net.sf.jasperreports</groupId>
+    <artifactId>jasperreports</artifactId>
+    <version>6.10.0</version>
+</dependency>-->
+```
+## [font thai](https://github.com/topkoka/python_101_ubuntu/tree/master/l00_Data_types)
 ## แปลงวันที่  
 ```java 
 new java.text.SimpleDateFormat("d MMM yy", new Locale("TH","th")).format(new Date())
