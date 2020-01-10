@@ -92,6 +92,9 @@ new java.text.SimpleDateFormat("d MMM yy", new Locale("TH","th")).format(new Dat
 	String reportPath = Pathfile + reportFileName;
 	String targetFileName = reportFileName.replace(".jrxml", ".pdf");
 	
+	// add path
+	JasperReport jasperReport = JasperCompileManager.compileReport(reportPath);
+	
 	// main report
 	JRBeanCollectionDataSource dataSource = new JRBeanCollectionDataSource(cowrList);
 	
