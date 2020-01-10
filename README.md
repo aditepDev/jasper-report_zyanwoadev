@@ -4,6 +4,9 @@ Database test
 # jasper-report_zyanwoadev
 
 แปลงวันที่  
+```java 
+new java.text.SimpleDateFormat("d MMM yy", new Locale("TH","th")).format(new Date())
+```
 ```java
 
 "วันที่ "+ ($F{cow_birth}.substring(8,10)) +
