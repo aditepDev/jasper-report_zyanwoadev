@@ -9,20 +9,19 @@
 	<queryString>
 		<![CDATA[select farm_name,farm_id as farmid,farm_id_card,farm_address,member_id as memberid ,
 
-
-IFNULL((select member_lat from zyanwoadev.tb_member where member_id = memberid ),"-") as member_lat,
-
-IFNULL((select member_long from zyanwoadev.tb_member where member_id = memberid ) ,"-")as member_long,
+IFNULL(IF((select member_lat from zyanwoadev.tb_member where member_id = memberid ) = "null","-",(select member_lat from zyanwoadev.tb_member where member_id = memberid )),"-") as member_lat,
+IFNULL(IF((select member_long from zyanwoadev.tb_member where member_id = memberid ) = "null","-",(select member_long from zyanwoadev.tb_member where member_id = memberid )),"-") as member_long,
 IFNULL((select member_name from zyanwoadev.tb_member where member_id = memberid)," ") as member_name,
 IFNULL((select member_surname from zyanwoadev.tb_member where member_id = memberid)," ") as member_surname,
 IFNULL((select coop_id from zyanwoadev.tbd_farm_coop where farm_id = farmid),"") as coopid , 
-IFNULL((select coop_name from zyanwoadev.tb_cooperative where tb_cooperative.coop_id = coopid),"") as coop_name 
+IFNULL((select coop_name from zyanwoadev.tb_cooperative where tb_cooperative.coop_id = coopid),"") as coop_name ,
+IFNULL((select mccsub_member_id from  zyanwoadev.tbc_coop_farm where farm_id = tbd_farm.farm_id ),"") as mccsub_member_ids ,
+IFNULL((select mccsub_member_canNumber from zyanwoadev.tbc_mccsub_member where mccsub_member_id = mccsub_member_ids ),"") as mccsub_member_canNumber,
+IFNULL((select mcc_member_id from zyanwoadev.tbc_mccsub_member where mccsub_member_id = mccsub_member_ids ),"-") as mcc_member_ids,
+IFNULL((select mcc_member_title from zyanwoadev.tbc_mcc_member where mcc_member_id = mcc_member_ids),"-") as mcc_member_title
 
 
-
-
-
-from zyanwoadev.tbd_farm where farm_id = $P{farmID}]]>
+from zyanwoadev.tbd_farm where farm_id =   $P{farmID}]]>
 	</queryString>
 	<field name="farm_name" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="farm_name"/>
@@ -62,6 +61,18 @@ from zyanwoadev.tbd_farm where farm_id = $P{farmID}]]>
 	<field name="coop_name" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="coop_name"/>
 	</field>
+	<field name="mccsub_member_ids" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="mccsub_member_ids"/>
+	</field>
+	<field name="mccsub_member_canNumber" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="mccsub_member_canNumber"/>
+	</field>
+	<field name="mcc_member_ids" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="mcc_member_ids"/>
+	</field>
+	<field name="mcc_member_title" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="mcc_member_title"/>
+	</field>
 	<background>
 		<band height="22">
 			<textField pattern=" d  MMMM yyyy">
@@ -69,7 +80,7 @@ from zyanwoadev.tbd_farm where farm_id = $P{farmID}]]>
 				<textElement verticalAlignment="Top">
 					<font fontName="TH SarabunPSK" size="12" isBold="false"/>
 				</textElement>
-				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				<textFieldExpression><![CDATA[new java.text.SimpleDateFormat("d MMM yy", new Locale("TH","th")).format(new Date())]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="441" y="1" width="34" height="20" uuid="9a3ec3e4-e57b-4137-9bf1-9c8f73c5839e"/>
@@ -90,7 +101,7 @@ from zyanwoadev.tbd_farm where farm_id = $P{farmID}]]>
 				<text><![CDATA[ รายงานสัดส่วนฝูงโค]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="12" y="166" width="60" height="20" uuid="3a12f9b2-c104-4408-a177-b03dbab33c8e"/>
+				<reportElement x="27" y="166" width="60" height="20" uuid="3a12f9b2-c104-4408-a177-b03dbab33c8e"/>
 				<textElement verticalAlignment="Top">
 					<font fontName="TH SarabunPSK" size="16" isBold="true"/>
 				</textElement>
@@ -98,21 +109,21 @@ from zyanwoadev.tbd_farm where farm_id = $P{farmID}]]>
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="12" y="126" width="50" height="20" uuid="59248948-1587-4c0d-9f33-b8c808cd4e1b"/>
+				<reportElement x="27" y="126" width="50" height="20" uuid="59248948-1587-4c0d-9f33-b8c808cd4e1b"/>
 				<textElement verticalAlignment="Top">
 					<font fontName="TH SarabunPSK" size="16" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ชื่อ - สกุล]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="192" y="166" width="40" height="20" uuid="f49c7943-b443-4b14-ba66-f1dfa595659a"/>
+				<reportElement x="208" y="166" width="40" height="20" uuid="f49c7943-b443-4b14-ba66-f1dfa595659a"/>
 				<textElement verticalAlignment="Top">
 					<font fontName="TH SarabunPSK" size="16" isBold="true"/>
 				</textElement>
 				<text><![CDATA[เบอร์ถัง]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="322" y="166" width="30" height="20" uuid="da9a3f21-db06-4df0-8f9b-b5df3369f665"/>
+				<reportElement x="320" y="166" width="30" height="20" uuid="da9a3f21-db06-4df0-8f9b-b5df3369f665"/>
 				<textElement verticalAlignment="Top">
 					<font fontName="TH SarabunPSK" size="16" isBold="true"/>
 				</textElement>
@@ -120,7 +131,7 @@ from zyanwoadev.tbd_farm where farm_id = $P{farmID}]]>
 ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="12" y="86" width="64" height="20" uuid="a1a4766d-6483-40cd-b653-698bd14e6e0a"/>
+				<reportElement x="27" y="86" width="64" height="20" uuid="a1a4766d-6483-40cd-b653-698bd14e6e0a"/>
 				<textElement textAlignment="Left" verticalAlignment="Top">
 					<font fontName="TH SarabunPSK" size="16" isBold="true"/>
 				</textElement>
@@ -134,14 +145,14 @@ from zyanwoadev.tbd_farm where farm_id = $P{farmID}]]>
 				<text><![CDATA[ที่อยู่]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="223" y="126" width="30" height="20" uuid="9082744b-26f0-4278-a73f-f8e849fdd6c2"/>
+				<reportElement x="208" y="126" width="30" height="20" uuid="9082744b-26f0-4278-a73f-f8e849fdd6c2"/>
 				<textElement textAlignment="Left" verticalAlignment="Top">
 					<font fontName="TH SarabunPSK" size="16" isBold="true"/>
 				</textElement>
 				<text><![CDATA[พิกัด]]></text>
 			</staticText>
 			<rectangle>
-				<reportElement x="170" y="85" width="78" height="20" uuid="0044f2ef-1383-4833-b97e-538d5a22637b"/>
+				<reportElement x="185" y="85" width="78" height="20" uuid="0044f2ef-1383-4833-b97e-538d5a22637b"/>
 			</rectangle>
 			<rectangle>
 				<reportElement x="0" y="205" width="555" height="10" forecolor="#FFFFFF" backcolor="#84CB6F" uuid="1cdd5042-271e-4e3b-864a-430f3e9268de">
@@ -152,14 +163,14 @@ from zyanwoadev.tbd_farm where farm_id = $P{farmID}]]>
 				</graphicElement>
 			</rectangle>
 			<textField>
-				<reportElement x="82" y="86" width="88" height="20" uuid="74fe57c1-46e9-4f28-8d0c-03bb58eaa9fc"/>
+				<reportElement x="97" y="86" width="88" height="20" uuid="74fe57c1-46e9-4f28-8d0c-03bb58eaa9fc"/>
 				<textElement textAlignment="Left" verticalAlignment="Top">
 					<font fontName="TH SarabunPSK" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{farm_name}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="170" y="86" width="80" height="18" uuid="46b93402-e30c-40e6-b324-4dba957c39c5"/>
+				<reportElement x="185" y="86" width="78" height="18" uuid="46b93402-e30c-40e6-b324-4dba957c39c5"/>
 				<textElement textAlignment="Center" verticalAlignment="Top">
 					<font fontName="TH SarabunPSK" size="15"/>
 				</textElement>
@@ -173,32 +184,32 @@ from zyanwoadev.tbd_farm where farm_id = $P{farmID}]]>
 				<textFieldExpression><![CDATA[$F{farm_address}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="82" y="126" width="141" height="20" uuid="4cb3011a-dcd9-4d72-b717-5b761b77ff1f"/>
+				<reportElement x="97" y="126" width="98" height="20" uuid="4cb3011a-dcd9-4d72-b717-5b761b77ff1f"/>
 				<textElement textAlignment="Left" verticalAlignment="Top">
 					<font fontName="TH SarabunPSK" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{member_name} + "   " + $F{member_surname}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="262" y="126" width="293" height="20" uuid="dec01e08-de99-4648-bc52-3978f4d54596"/>
+				<reportElement x="255" y="126" width="288" height="20" uuid="dec01e08-de99-4648-bc52-3978f4d54596"/>
 				<textElement textAlignment="Left" verticalAlignment="Top">
 					<font fontName="TH SarabunPSK" size="16"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Lat  " + $F{member_lat} +"  Long  " + $F{member_long}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="242" y="166" width="70" height="20" uuid="775a6085-b429-406b-b186-ce0f87f10cb2"/>
+				<reportElement x="255" y="166" width="50" height="20" uuid="775a6085-b429-406b-b186-ce0f87f10cb2"/>
 				<textElement textAlignment="Left" verticalAlignment="Top">
 					<font fontName="TH SarabunPSK" size="16"/>
 				</textElement>
-				<textFieldExpression><![CDATA["024"]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{mccsub_member_canNumber}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="362" y="166" width="193" height="20" uuid="3458b145-e807-4339-967c-5c102b029bf1"/>
+				<reportElement x="350" y="166" width="205" height="20" uuid="3458b145-e807-4339-967c-5c102b029bf1"/>
 				<textElement textAlignment="Left" verticalAlignment="Top">
 					<font fontName="TH SarabunPSK" size="16"/>
 				</textElement>
-				<textFieldExpression><![CDATA["ศูนย์รวบรวมน้ำนมดิบบรบือ"]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{mcc_member_title}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="0" y="40" width="555" height="30" uuid="45346323-3285-42a0-87e0-63c27dfc7f71"/>
@@ -208,11 +219,11 @@ from zyanwoadev.tbd_farm where farm_id = $P{farmID}]]>
 				<textFieldExpression><![CDATA["    "+$F{coop_name}]]></textFieldExpression>
 			</textField>
 			<textField pattern=" d  MMMM yyyy">
-				<reportElement x="73" y="166" width="100" height="20" uuid="61e9d116-ff4f-4f08-b0e4-81d230edb31f"/>
+				<reportElement x="97" y="166" width="100" height="20" uuid="61e9d116-ff4f-4f08-b0e4-81d230edb31f"/>
 				<textElement verticalAlignment="Top">
 					<font fontName="TH SarabunPSK" size="16" isBold="false"/>
 				</textElement>
-				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				<textFieldExpression><![CDATA[new java.text.SimpleDateFormat("d MMM yy", new Locale("TH","th")).format(new Date())]]></textFieldExpression>
 			</textField>
 			<rectangle>
 				<reportElement x="180" y="205" width="200" height="10" forecolor="#FFFFFF" backcolor="#707070" uuid="09466f90-b7b9-49a0-843c-e4d3e7f521b3">

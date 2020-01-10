@@ -1,598 +1,718 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.10.0.final using JasperReports Library version 6.10.0-unknown  -->
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="supcowreport" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a1484f98-1da1-46a0-8c4f-3ff54d117a2f">
-	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sample DB"/>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4_Landscape_1" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f1ffa432-cbb2-4fbc-8b06-5a6c2022cba4">
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
-	<parameter name="ID" class="java.lang.Integer"/>
-	<parameter name="SUBREPORT_DATA_SOURCE" class="net.sf.jasperreports.engine.JRDataSource"/>
-	<queryString>
-		<![CDATA[select * from  zyanwoadev.cowreport where cow_ids = $P{ID}]]>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sample DB"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="0"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="1000"/>
+	<parameter name="ID" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[new Integer(1)]]></defaultValueExpression>
+	</parameter>
+	<parameter name="Subreport_cowbirth_Parameter" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="SUBREPORT_cowbirth_DATA_SOURCE" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="Subreport_cowbreeding_Parameter" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="SUBREPORT_cowbreeding_DATA_SOURCE" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="Subreport_ cowVaccien_Parameter" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="SUBREPORT_cowVaccien_DATA_SOURCE" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="Subreport_cowMedicine_Parameter" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="SUBREPORT_cowMedicine_DATA_SOURCE" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<queryString language="SQL">
+		<![CDATA[select * from zyanwoadev.cowreport2 where  cowreport2.cow_ids = $P{ID}]]>
 	</queryString>
 	<field name="cow_ids" class="java.lang.Integer">
 		<property name="com.jaspersoft.studio.field.label" value="cow_ids"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="cow_name" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="cow_name"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="farm_id" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="farm_id"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="zyan_code" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="zyan_code"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="cow_birth" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="cow_birth"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="cow_ear_code" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="cow_ear_code"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="cow_date_event" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="cow_date_event"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="cow_img" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="cow_img"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="breed_ID" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="breed_ID"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="breed_code" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="breed_code"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="breed_name" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="breed_name"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="member_ids" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="member_ids"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="member_name" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="member_name"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="member_surname" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="member_surname"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="member_addr" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="member_addr"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="member_lat" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="member_lat"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="member_long" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="member_long"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="cow_fa_zyancode" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="cow_fa_zyancode"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="cow_fa_ID" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="cow_fa_ID"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="cow_fa_ear_code" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="cow_fa_ear_code"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="cow_fa_breed_id" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="cow_fa_breed_id"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="cow_fa_breed_code" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="cow_fa_breed_code"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="cow_fa_breed_name" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="cow_fa_breed_name"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="cow_ma_zyancode" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="cow_ma_zyancode"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="cow_ma_ID" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="cow_ma_ID"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="cow_ma_ear_code" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="cow_ma_ear_code"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="cow_ma_breed_id" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="cow_ma_breed_id"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="cow_ma_breed_code" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="cow_ma_breed_code"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="cow_ma_breed_name" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="cow_ma_breed_name"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="cow_grandfa_ma_zyan_code" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="cow_grandfa_ma_zyan_code"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="cow_grandfa_ma_ID" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="cow_grandfa_ma_ID"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="cow_grandfa_ma_ear_code" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="cow_grandfa_ma_ear_code"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="cow_grandfa_ma_breed_id" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="cow_grandfa_ma_breed_id"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="cow_grandfa_ma_breed_code" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="cow_grandfa_ma_breed_code"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="cow_grandfa_ma_breed_name" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="cow_grandfa_ma_breed_name"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="cow_grandma_ma_zyan_code" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="cow_grandma_ma_zyan_code"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="cow_grandma_ma_ID" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="cow_grandma_ma_ID"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="cow_grandma_ma_ear_code" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="cow_grandma_ma_ear_code"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="cow_grandma_ma_breed_id" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="cow_grandma_ma_breed_id"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="cow_grandma_ma_breed_code" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="cow_grandma_ma_breed_code"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="cow_grandma_ma_breed_name" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="cow_grandma_ma_breed_name"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="cow_grandfa_fa_zyan_code" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="cow_grandfa_fa_zyan_code"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="cow_grandfa_fa_ID" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="cow_grandfa_fa_ID"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="cow_grandfa_fa_ear_code" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="cow_grandfa_fa_ear_code"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="cow_grandfa_fa_breed_id" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="cow_grandfa_fa_breed_id"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="cow_grandfa_fa_breed_code" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="cow_grandfa_fa_breed_code"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="cow_grandfa_fa_breed_name" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="cow_grandfa_fa_breed_name"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="cow_grandma_fa_zyan_code" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="cow_grandma_fa_zyan_code"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="cow_grandma_fa_ID" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="cow_grandma_fa_ID"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="cow_grandma_fa_ear_code" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="cow_grandma_fa_ear_code"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="cow_grandma_fa_breed_id" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="cow_grandma_fa_breed_id"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="cow_grandma_fa_breed_code" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="cow_grandma_fa_breed_code"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="cow_grandma_fa_breed_name" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="cow_grandma_fa_breed_name"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="farm_name" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="farm_name"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="farm_address" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="farm_address"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
 	<field name="farm_id_card" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="farm_id_card"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cowreport2"/>
 	</field>
+	<background>
+		<band height="19">
+			<textField>
+				<reportElement x="720" y="0" width="51" height="19" uuid="0ff27b29-27e2-4117-ae41-245e1928197c"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["หน้า " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="770" y="0" width="51" height="19" uuid="8b9afe67-a6e0-474b-93ad-7f145c41fdf5"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" / " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</background>
 	<title>
-		<band height="217" splitType="Stretch">
+		<band height="218">
 			<rectangle>
-				<reportElement x="319" y="45" width="92" height="17" uuid="e94b3164-f1df-4705-a63c-2b536b825d67"/>
+				<reportElement x="154" y="40" width="635" height="2" forecolor="#FFFFFF" backcolor="#020302" uuid="4963b477-42c9-4bbf-9fac-c17cb04a4c10">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="154" y="215" width="635" height="2" forecolor="#FFFFFF" backcolor="#020302" uuid="6bd90b64-f985-4529-a3c4-8c1cb8554595">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="330" y="50" width="92" height="17" uuid="3511ef15-42e2-42a8-89a8-da6a1e3335df"/>
 			</rectangle>
 			<staticText>
-				<reportElement x="6" y="6" width="801" height="30" uuid="5eaabaef-7cb2-4f8b-8763-0c4b55b4a564"/>
+				<reportElement x="0" y="11" width="802" height="30" uuid="e59be588-3366-4e37-af7d-829028002e95"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="21" isBold="true"/>
 				</textElement>
 				<text><![CDATA[บัตรประจำตัวโคนม]]></text>
 			</staticText>
-			<image>
-				<reportElement x="6" y="115" width="138" height="97" uuid="0d8fc362-baab-4705-851b-f9970cf9cff4"/>
+			<image scaleImage="FillFrame" evaluationTime="Auto">
+				<reportElement x="0" y="41" width="154" height="175" uuid="ebc23ce3-7023-44b8-aba6-0958f6e4a67e"/>
 				<box>
-					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
-				<imageExpression><![CDATA["https://github.com/topkoka/SpringWebMVC_JasperReport/blob/master/src/pic/cow.png?raw=true"]]></imageExpression>
-			</image>
-			<image>
-				<reportElement x="6" y="18" width="138" height="97" uuid="7cc8ca79-ed8a-4e21-beba-572a220710f5"/>
-				<box>
-					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-				</box>
-				<imageExpression><![CDATA["https://github.com/topkoka/SpringWebMVC_JasperReport/blob/master/src/pic/cow1.png?raw=true"]]></imageExpression>
+				<imageExpression><![CDATA["https://dairy.zyanwoa.com/uploadFiles/small-"+$F{cow_img}]]></imageExpression>
 			</image>
 			<staticText>
-				<reportElement x="155" y="66" width="50" height="18" uuid="3ec513f3-c2ab-4c97-bc32-33d8633ba4db"/>
+				<reportElement x="166" y="71" width="50" height="18" uuid="d564fad2-dd7e-499a-813a-5cd218a1ab82"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ชื่อเจ้าของ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="445" y="45" width="20" height="18" uuid="f4c3bb2f-df8c-473b-b5d0-033bafcf2234"/>
+				<reportElement x="456" y="50" width="20" height="18" uuid="763a4db8-9890-4d52-a9b3-2a2d3a66a4f3"/>
 				<textElement textAlignment="Left" verticalAlignment="Top">
 					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ที่อยู่]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="155" y="45" width="64" height="18" uuid="f2527d1e-a0e1-4a40-a7b9-7f859da95306"/>
+				<reportElement x="166" y="50" width="64" height="18" uuid="7217bfd8-9f80-45d0-a9a9-c561a3de64ce"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ทะเบียนฟาร์ม]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="155" y="86" width="30" height="18" uuid="2b29dd7a-3f3e-43d8-82df-9332b537325c"/>
+				<reportElement x="166" y="91" width="30" height="18" uuid="16b381e5-9d22-42bd-ade7-c5b18ec85f6c"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ชื่อโค]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="280" y="86" width="90" height="18" uuid="605ce3db-55f2-4371-b5b9-b755e3d9815a"/>
+				<reportElement x="291" y="91" width="90" height="18" uuid="79775122-011e-404b-a38b-f5fb51474495"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[เบอร์โค ( ระบบฟาร์ม )]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="155" y="126" width="38" height="18" uuid="180ea54f-bde1-4773-8066-55ec6098c283"/>
+				<reportElement x="166" y="131" width="38" height="18" uuid="f5ac2832-f6b8-4e7e-b36a-3c92eab9f5da"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[เบอร์พ่อ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="319" y="126" width="20" height="18" uuid="ee9abbed-4791-41f2-ae5d-25f0406babe1"/>
+				<reportElement x="330" y="131" width="20" height="18" uuid="f469b67b-6bc0-47d4-9737-f134cfb659eb"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[พันธุ์]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="447" y="126" width="38" height="18" uuid="91e4dda3-23c0-4ac6-8236-3df70dbe131d"/>
+				<reportElement x="458" y="131" width="38" height="18" uuid="2607fd31-a51f-4d20-a777-9eda4fe4d4dd"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[เบอร์แม่]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="637" y="127" width="20" height="18" uuid="b09b6acf-2029-459e-8e99-64412b249e08"/>
+				<reportElement x="648" y="132" width="20" height="18" uuid="47697393-1cba-4c1c-83a3-c654989e00f6"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[พันธุ์]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="155" y="146" width="38" height="18" uuid="ba141d37-1765-41bf-9fab-7acf0debc97f"/>
+				<reportElement x="166" y="151" width="38" height="18" uuid="e19b5e24-47d5-42e7-b10d-3b97bd718d44"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[เบอร์ปู่]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="319" y="146" width="20" height="18" uuid="fa24385d-b8b9-4f9d-af2e-f7dd94bd2a9d"/>
+				<reportElement x="330" y="151" width="20" height="18" uuid="30033ec4-f299-4d06-8e89-58c23e0b84db"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[พันธุ์]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="447" y="146" width="38" height="18" uuid="b87e8a60-30a6-4ba2-b89f-6871cf84ff05"/>
+				<reportElement x="458" y="151" width="38" height="18" uuid="3e9fc3bd-31a7-44d2-a270-cda1911db697"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[เบอร์ตา]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="637" y="147" width="20" height="18" uuid="1c7875f8-56d7-498b-b79f-86256aaef96e"/>
+				<reportElement x="648" y="152" width="20" height="18" uuid="3031e5d4-bd86-470b-a5af-501154eda818"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[พันธุ์]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="155" y="186" width="174" height="18" uuid="37f91cc8-76ce-4cac-a36c-5fe9c2ddee82"/>
+				<reportElement x="166" y="191" width="174" height="18" uuid="7d512b15-1c5d-4a25-8786-9f0cba952dda"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ถ้าเป็นแม่โคและเคยมีลูกแล้วให้ลูกตัวที่]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="336" y="186" width="47" height="18" uuid="334cade8-8187-499d-8abe-7170749ec066"/>
+				<reportElement x="416" y="191" width="47" height="18" uuid="83c47f5f-535f-44f8-83d8-88f50c623997"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[วันคลอด]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="388" y="186" width="120" height="18" uuid="8c776cb3-ba20-4aca-8f36-ed02a84021b7"/>
+				<reportElement x="521" y="191" width="120" height="18" uuid="3240c306-006a-49f9-8fb3-6842d15343af"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[หมายเลขพ่อที่ใช้ผสม]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="35" y="5" width="79" height="12" uuid="b773b1dd-28c7-4049-ba19-1d64d52dbdef"/>
+				<reportElement x="6" y="28" width="148" height="12" uuid="90532d51-fb07-47fe-ba52-9b1313d13b7d"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="10"/>
 				</textElement>
 				<text><![CDATA[รูปพรรณโคนม]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="320" y="46" width="91" height="16" uuid="19a225e6-a02b-4c2a-93cc-21eb8da793cf"/>
+				<reportElement x="331" y="51" width="91" height="16" uuid="04a61721-7338-42b5-982d-3894ae85d3b8"/>
 				<textElement textAlignment="Center" verticalAlignment="Top">
 					<font fontName="TH SarabunPSK" size="13" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{farm_id_card}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="207" y="66" width="204" height="18" uuid="a52d9818-cba3-4d5e-8a91-efd2e57603a5"/>
+				<reportElement x="218" y="71" width="204" height="18" uuid="b7601f19-1e47-4435-bb7b-1f2a7b252d50"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{member_name}+"  "+$F{member_surname}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="494" y="45" width="309" height="18" uuid="adf0563e-7e50-43dc-a85a-3ae9e9f3d0d3"/>
+				<reportElement x="505" y="50" width="284" height="18" uuid="25849df0-3938-42de-9166-ca3dcf650fc3"/>
 				<textElement textAlignment="Left" verticalAlignment="Top">
 					<font fontName="TH SarabunPSK" size="14" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{farm_address}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="187" y="86" width="90" height="18" uuid="950c1c7a-5303-4733-88be-31bd0e6f694d"/>
+				<reportElement x="198" y="91" width="90" height="18" uuid="5a5bba64-f67b-434d-910a-bdfd57cdaa89"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cow_name}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="370" y="86" width="74" height="18" uuid="07222ed4-b393-4c4c-969a-00cec84f6672"/>
+				<reportElement x="381" y="91" width="74" height="18" uuid="21585749-65b4-4226-afb8-a46966e548ed"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cow_ear_code}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="195" y="126" width="120" height="18" uuid="0fe7e6b7-9f3f-4423-8ea8-3e391497edaa"/>
+				<reportElement x="206" y="131" width="120" height="18" uuid="ff62d10f-d941-4e63-b58f-88613434b6f0"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cow_fa_ear_code}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="345" y="126" width="94" height="18" uuid="2d0093b3-731f-43e8-8a4c-221d630c52de"/>
+				<reportElement x="356" y="131" width="94" height="18" uuid="f25ba7af-6b3c-4b83-9866-27d6b1fe5139"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cow_fa_breed_code}+" - "+$F{cow_fa_breed_name}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="489" y="126" width="136" height="18" uuid="456e8e5d-1d20-4b3d-b67d-0bf9f02fadf5"/>
+				<reportElement x="500" y="131" width="136" height="18" uuid="9fc76340-a9c8-4d16-b8b3-b7edda463ea9"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cow_ma_ear_code}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="665" y="126" width="120" height="18" uuid="cf2a7f39-1051-40cc-984f-e01b51b4ae12"/>
+				<reportElement x="676" y="131" width="112" height="18" uuid="7e8983ff-4567-4108-8566-a1f1f8c3ecfb"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cow_ma_breed_code}+" - "+$F{cow_ma_breed_name}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="195" y="146" width="120" height="18" uuid="90224502-f190-4283-bdfe-7624d643b6c8"/>
+				<reportElement x="206" y="151" width="120" height="18" uuid="a88b7cb8-f880-4838-a796-f54e9f531757"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cow_grandfa_fa_ear_code}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="345" y="146" width="94" height="18" uuid="b6d76831-bda0-4efb-aa90-98589cb2f99f"/>
+				<reportElement x="356" y="151" width="94" height="18" uuid="da26ed7a-91ea-46aa-8abb-e950a1c869a3"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cow_grandfa_fa_breed_code}+" - "+$F{cow_grandfa_fa_breed_name}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="489" y="145" width="136" height="18" uuid="2c794629-f82e-461e-abc8-a46e38e3ebc2"/>
+				<reportElement x="500" y="150" width="136" height="18" uuid="a4aa0746-269b-459c-a962-57727c8c5474"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cow_grandfa_ma_ear_code}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="665" y="146" width="120" height="18" uuid="220fd703-c1cc-4e44-a1f1-0b98ab5d3fef"/>
+				<reportElement x="676" y="151" width="112" height="18" uuid="693cd6e8-5d61-4118-9d3d-754d4fc1104d"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cow_grandfa_ma_breed_code}+" - "+$F{cow_grandfa_ma_breed_name}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="220" y="45" width="98" height="18" uuid="8ac98b6c-69dc-4882-8315-ba0b27b5b526"/>
+				<reportElement x="231" y="50" width="98" height="18" uuid="a93a5a0c-cedb-4e43-8e90-2e643270231f"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{farm_name}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="445" y="66" width="20" height="18" uuid="7a2de662-f5fe-4c96-a4cb-9258bb033ea2"/>
+				<reportElement x="456" y="71" width="20" height="18" uuid="b3091630-519f-4df5-af9b-e6c9487f4d8f"/>
 				<textElement textAlignment="Left" verticalAlignment="Top">
 					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[พิกัด]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="155" y="106" width="20" height="18" uuid="e40be5b4-c910-49de-b5d8-1b2034b8ad62"/>
+				<reportElement x="166" y="111" width="20" height="18" uuid="e3a0d3fc-a3f5-4ddf-bce3-698bab63cf8c"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[พันธุ์]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="325" y="106" width="32" height="18" uuid="7c796b01-4926-469f-ba53-97c3e367327c"/>
+				<reportElement x="336" y="111" width="32" height="18" uuid="6c750268-e264-44c4-9537-ff6fa1b0cf46"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[วันเกิด]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="175" y="106" width="146" height="18" uuid="2773e5b6-a7e3-4268-aaeb-5eb74da41477"/>
+				<reportElement x="186" y="111" width="146" height="18" uuid="85434e12-de12-42d4-a023-c9dc83be9e15"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{breed_code}+" - "+$F{breed_name}]]></textFieldExpression>
 			</textField>
 			<textField pattern="d MMMM yyyy">
-				<reportElement x="363" y="106" width="172" height="18" uuid="3649570d-3c19-453d-91b6-54599a6a7e03"/>
+				<reportElement x="374" y="111" width="172" height="18" uuid="bd2e9d95-a2de-4b97-aa24-b8d92982a32c"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cow_birth}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="445" y="86" width="40" height="18" uuid="68f8f86d-2d30-4c64-b94b-0d5d79980207"/>
+				<reportElement x="456" y="91" width="40" height="18" uuid="5e5dd38e-b45f-4787-97b8-f551ecec0826"/>
 				<textElement textAlignment="Left" verticalAlignment="Top">
 					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Zyan ID]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="319" y="166" width="20" height="18" uuid="bfe971d6-aecf-423c-b2da-901cc4e8e5ea"/>
+				<reportElement x="330" y="171" width="20" height="18" uuid="b2f5462e-15fa-4383-b7d2-fa6ef8258aab"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[พันธุ์]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="195" y="166" width="120" height="18" uuid="c6a51d89-483d-40e0-97b1-eeb31ba74484"/>
+				<reportElement x="206" y="171" width="120" height="18" uuid="ab3c504c-76b5-4fed-8977-806c046851d0"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cow_grandma_fa_ear_code}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="489" y="166" width="136" height="18" uuid="c12810eb-1646-43e5-af4f-4115fe678b23"/>
+				<reportElement x="500" y="171" width="136" height="18" uuid="77e2f9ed-07f7-435a-a252-de7177c350c8"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cow_grandma_ma_ear_code}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="665" y="167" width="120" height="18" uuid="42868c16-7924-4aa5-9670-1fd99805d9d9"/>
+				<reportElement x="676" y="172" width="112" height="18" uuid="01b326c0-16e4-47ef-aaa8-83f6b46b924e"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cow_grandma_ma_breed_code}+" - "+$F{cow_grandma_ma_breed_name}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="447" y="166" width="38" height="18" uuid="97e9321c-36fe-44b9-a235-dde122bff57d"/>
+				<reportElement x="458" y="171" width="38" height="18" uuid="b1371c67-2634-48d6-9ce2-e87fccd79e3d"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[เบอร์ยาย]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="345" y="166" width="94" height="18" uuid="7093d910-3809-456e-8b14-5694d28ee5a7"/>
+				<reportElement x="356" y="171" width="94" height="18" uuid="45845fc8-f93f-4416-bf3a-53856363a339"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cow_grandma_fa_breed_code}+" - "+$F{cow_grandfa_fa_breed_name}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="637" y="167" width="20" height="18" uuid="af7d54d0-349a-4a38-9ba6-9a579e85b8b5"/>
+				<reportElement x="648" y="172" width="20" height="18" uuid="ec94c088-207b-43b3-ba87-064fc68171ca"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[พันธุ์]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="155" y="166" width="38" height="18" uuid="c4696193-9e1c-4bfb-92dc-b226e99bdd1a"/>
+				<reportElement x="166" y="171" width="38" height="18" uuid="bfafbfea-ee18-491e-b330-411fb819c93d"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
 					<font fontName="TH SarabunPSK" size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[เบอร์ย่า]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="495" y="86" width="280" height="18" uuid="128600ca-e0d8-4d6c-b5e8-ff1fa76e5203"/>
-				<textElement verticalAlignment="Middle">
+				<reportElement x="506" y="91" width="282" height="18" uuid="ffd5b5ae-34cb-486f-afef-92534260b7bd"/>
+				<textElement verticalAlignment="Top">
 					<font fontName="TH SarabunPSK" size="14" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{zyan_code}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="494" y="66" width="309" height="18" uuid="20382b0a-aa2f-4ea7-97dd-249e8c06a440"/>
+				<reportElement x="505" y="71" width="284" height="18" uuid="ed2710b4-ef43-4897-afe2-3efad6f8f844"/>
 				<textElement verticalAlignment="Top">
 					<font fontName="TH SarabunPSK" size="14" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Lat  "+$F{member_lat} +"   Long  "+$F{member_long}]]></textFieldExpression>
 			</textField>
+			<rectangle>
+				<reportElement x="788" y="41" width="1" height="175" forecolor="#FFFFFF" backcolor="#020302" uuid="77f30cee-5206-4c4e-be3f-cbc770d8b2a6">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.0" lineColor="#000000"/>
+				</graphicElement>
+			</rectangle>
 		</band>
 	</title>
+	<pageHeader>
+		<band height="15"/>
+	</pageHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<subreport>
+				<reportElement x="0" y="2" width="802" height="11" uuid="666c9f60-835a-4742-ba9b-db26fc42d422">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[$P{SUBREPORT_cowbreeding_DATA_SOURCE}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{Subreport_cowbreeding_Parameter}]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="14">
+			<property name="com.jaspersoft.studio.layout"/>
+			<subreport>
+				<reportElement x="0" y="2" width="397" height="11" uuid="09f74339-1686-4144-a87c-1f2505d8971b"/>
+				<dataSourceExpression><![CDATA[$P{SUBREPORT_cowbirth_DATA_SOURCE}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{Subreport_cowbirth_Parameter}]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement x="402" y="2" width="402" height="10" uuid="e1e1b7c6-66fb-46e3-a8ca-c325f01de556"/>
+				<dataSourceExpression><![CDATA[$P{SUBREPORT_cowVaccien_DATA_SOURCE}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{Subreport_ cowVaccien_Parameter}]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="12">
+			<subreport>
+				<reportElement x="0" y="2" width="802" height="10" uuid="41f0e2d2-b997-4e91-a973-57307d94282f"/>
+				<dataSourceExpression><![CDATA[$P{SUBREPORT_cowMedicine_DATA_SOURCE}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{Subreport_cowMedicine_Parameter}]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<lastPageFooter>
+		<band height="37">
+			<staticText>
+				<reportElement x="122" y="15" width="250" height="20" uuid="899f0e76-becb-4954-b55f-3e07c6f52d36"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[© Copyright 2020. Zyntelligent Co., Ltd. All Rights Reserved.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="15" width="426" height="20" uuid="a627db0b-e4c2-452a-a662-e02d964121e6"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="TH SarabunPSK" size="14"/>
+				</textElement>
+				<text><![CDATA[( บัตรประจำตัวโคนม  ประจำฟาร์มเกษตกร  สำหรับเกษตรกร และ นักส่งเสริม )]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="15" width="119" height="20" uuid="9ed92015-94d2-4828-8c2c-34b429d13094"/>
+				<imageExpression><![CDATA["https://github.com/topkoka/jasper-report_zyanwoadev/blob/master/src/pic/logo1x.png?raw=true"]]></imageExpression>
+			</image>
+			<rectangle>
+				<reportElement x="0" y="0" width="802" height="10" forecolor="#FFFFFF" backcolor="#84CB6F" uuid="ec38a22f-34f4-4e9f-afa9-7dffab350749">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="301" y="0" width="200" height="10" forecolor="#FFFFFF" backcolor="#707070" uuid="3b861c18-cac9-4308-81b6-3a3f26f1cfd3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+		</band>
+	</lastPageFooter>
 </jasperReport>

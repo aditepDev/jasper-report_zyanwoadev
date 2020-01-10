@@ -57,22 +57,8 @@ response.setContentType("text/html;charset=UTF-8");
 			for (int i = 0; i < pplsrList.size(); i++) {
 				System.out.println(pplsrList.get(i).get("member_lat")+" "+pplsrList.get(i).get("member_long"));
 			}
-//			System.out.println(cowrList.get("cow_ids"));
-//			ArrayList<cowreportModel> cowrList =  cowrDAO.FindAll();
-				
-//			System.out.println("id = "+id);
-//
-//			ArrayList<Object> model = new ArrayList<Object>();
-//			String reportFileName = null;
-//			if(typecowreport == 0) {
-////				model.addAll(cowrList);
-//				reportFileName = "cowreport.jrxml";
-//			}else {
-////				model.addAll(cowrthaiList);
-//				reportFileName = "cowreport_thailand.jrxml";
-//				}
-//			System.out.println(model);
-//			
+
+		
 			db.close();
 			String Pathfile = "C:\\Users\\aditep\\git\\jasper-report_zyanwoadev\\src\\JasperReport\\PPLSReport\\";
 			// path
@@ -88,7 +74,7 @@ response.setContentType("text/html;charset=UTF-8");
 			JasperReport PPLS_subreportParameter  = JasperCompileManager.compileReport(PPLS_subreportPath);
 	
 			JRBeanCollectionDataSource dataSource = new JRBeanCollectionDataSource(pplsrList);	
-//			JRBeanCollectionDataSource supcowreport_breedingDataSource = new JRBeanCollectionDataSource(cowrList2);
+
 	
 			 Map<String, Object> parameters = new HashMap<>();
 		        parameters.put("farmID", id);
@@ -120,7 +106,7 @@ response.setContentType("text/html;charset=UTF-8");
 //            JasperExportManager.exportReportToPdfFile(jasperPrint, path + "\\employees.pdf");
 
 	
-			
+			// ช่วงให้นม   วันดราย - วันคลอด         ช่วงวัน ดราย    วันคลอด    - วันดราย             ระยะห่างการคลอด วันคลอดถึงวันคลอด     
 			
 			outputstream.flush();
 			outputstream.close();

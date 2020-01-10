@@ -26,6 +26,12 @@ import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 /**
 
 /**
@@ -57,8 +63,10 @@ response.setContentType("text/html;charset=UTF-8");
 			ArrayList<HashMap<String, Object>> cowVaccien = cowrDAO.FindCowVaccien(id);
 			ArrayList<HashMap<String, Object>> cowMedicine = cowrDAO.FindCowMedicine(id);
 			
-			for (int i = 0; i < cowbirth.size(); i++) {
-				System.out.println(cowbirth.get(i).get("cow_name")+" "+cowbirth.get(i).get("cow_sex"));
+
+			for (int i = 0; i < cowrList.size(); i++) {
+				System.out.println("ชื่อวัว :  "+cowrList.get(i).get("cow_name") + "   ชื่อเจ้าของ :  " + cowrList.get(i).get("member_name") + "   "
+						+(cowrList.get(i).get("member_surname")));   
 			}
 			
 		
@@ -95,35 +103,46 @@ response.setContentType("text/html;charset=UTF-8");
 			JRBeanCollectionDataSource supcowreport_cow_vaccienDataSource = new JRBeanCollectionDataSource(cowVaccien);
 			JRBeanCollectionDataSource supcowreport_cowMedicineDataSource = new JRBeanCollectionDataSource(cowMedicine);
 			
-			
-			System.out.println("CowBreeding : "+CowBreeding.size());
+
+			System.out.println("CowBreeding : " + CowBreeding.size());
 			if (CowBreeding.size() == 0) {
-				supcowreport_breedingtFileName = "supcowreport_Nobreeding.jrxml"; 
+				supcowreport_breedingtFileName = "supcowreport_Nobreeding.jrxml";
 				supcowreport_breedingPath = Pathfile + supcowreport_breedingtFileName;
-				supcowreport_breedingParameter  = JasperCompileManager.compileReport(supcowreport_breedingPath);
+				supcowreport_breedingParameter = JasperCompileManager.compileReport(supcowreport_breedingPath);
 				supcowreport_breedingDataSource = new JRBeanCollectionDataSource(cowrList);
 			}
-			System.out.println("cowMedicine : "+cowMedicine.size());
+			System.out.println("cowbirth : " + cowbirth.size());
+			if (cowbirth.size() == 0 || cowbirth.size() == 1) {
+				for (int i = 0; i < cowbirth.size(); i++) {
+					if (cowbirth.get(i).get("cow_name") == null && cowbirth.get(i).get("cow_sex") == null
+							&& cowbirth.get(i).get("cow_birth") == null) {
+						supcowreport_cowbirthFileName = "supcowreport_Nobirth.jrxml";
+						supcowreport_cowbirthPath = Pathfile + supcowreport_cowbirthFileName;
+						supcowreport_cowbirthParameter = JasperCompileManager
+								.compileReport(supcowreport_cowbirthPath);
+						supcowreport_cowbirthDataSource = new JRBeanCollectionDataSource(cowrList);
+					}
+				}
+
+			}
+			
+				
+			System.out.println("cowVaccien : " + cowVaccien.size());
+			if (cowVaccien.size() == 0) {
+				supcowreport_cow_vaccienFileName = "supcowreport_Nocow_vaccien.jrxml";
+				supcowreport_cow_vaccienPath = Pathfile + supcowreport_cow_vaccienFileName;
+				supcowreport_cow_vaccienParameter = JasperCompileManager
+						.compileReport(supcowreport_cow_vaccienPath);
+				supcowreport_cow_vaccienDataSource = new JRBeanCollectionDataSource(cowrList);
+			}
+		
+			System.out.println("cowMedicine : " + cowMedicine.size());
 			if (cowMedicine.size() == 0) {
 				supcowreport_cowMedicineFileName = "supcowreport_Nocow_medicine.jrxml";
 				supcowreport_cowMedicinePath = Pathfile + supcowreport_cowMedicineFileName;
-				supcowreport_cowMedicineParameter = JasperCompileManager.compileReport(supcowreport_cowMedicinePath);
+				supcowreport_cowMedicineParameter = JasperCompileManager
+						.compileReport(supcowreport_cowMedicinePath);
 				supcowreport_cowMedicineDataSource = new JRBeanCollectionDataSource(cowrList);
-			}
-			
-			System.out.println("cowbirth : "+cowbirth.size());
-			if (cowbirth.size() == 0) {
-				supcowreport_cowbirthFileName = "supcowreport_Nobirth.jrxml";
-				supcowreport_cowbirthPath = Pathfile + supcowreport_cowbirthFileName;
-				supcowreport_cowbirthParameter = JasperCompileManager.compileReport(supcowreport_cowbirthPath);
-				supcowreport_cowbirthDataSource = new JRBeanCollectionDataSource(cowrList);
-			}
-			System.out.println("cowVaccien : "+cowVaccien.size());
-			if (cowVaccien.size() == 0) {
-				supcowreport_cow_vaccienFileName = "supcowreport_Nocow_vaccien.jrxml"; 
-				supcowreport_cow_vaccienPath = Pathfile + supcowreport_cow_vaccienFileName;
-				supcowreport_cow_vaccienParameter = JasperCompileManager.compileReport(supcowreport_cow_vaccienPath);
-				supcowreport_cow_vaccienDataSource = new JRBeanCollectionDataSource(cowrList);
 			}
 			
 			 Map<String, Object> parameters = new HashMap<>();
@@ -173,6 +192,7 @@ response.setContentType("text/html;charset=UTF-8");
     /**
      * @see HttpServlet#HttpServlet()
      */
+
     public cowreport() {
         super();
         // TODO Auto-generated constructor stub
