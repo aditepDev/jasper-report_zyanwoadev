@@ -132,5 +132,20 @@ new java.text.SimpleDateFormat("d MMM yy", new Locale("TH","th")).format(new Dat
 			e.printStackTrace();
 		}
 ```
-
-
+## jasper report parameter
+``` xml 
+	<parameter name="start" class="java.lang.String"/>
+	<parameter name="farmID" class="java.lang.Integer"/
+		   
+		   
+   <textFieldExpression><![CDATA[$P{cowRolledNC}]]></textFieldExpression>
+			</textField>
+```
+``` java
+ Map<String, Object> parameters = new HashMap<>();
+	 parameters.put("farmID", farmId);
+	 parameters.put("start", d_start+"-"+m_start+"-"+y_start);
+	 					//	  |
+						//	  v
+jasperPrint = JasperFillManager.fillReport(jasperReport, parameters, dataSource);
+```
