@@ -189,3 +189,10 @@ try {
 						//	  v
 jasperPrint = JasperFillManager.fillReport(jasperReport, parameters, dataSource);
 ```
+## ต้ังชื่อ file pdf ภาษาไทย
+```java
+
+String fileName = "รายงานสัดส่วนฝูงโค-"+farmCoopModel.getFarmId().getFarmName()+" วิเคราะห์วันที่ "+d_start+"-"+m_start+"-"+y_start+".pdf"; 
+String fileNames = URLEncoder.encode(fileName, "UTF-8");
+response.setHeader("Content-Disposition","inline; filename=\""+fileNames +"");
+```
