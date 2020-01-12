@@ -73,7 +73,7 @@ try {
 	ArrayList<HashMap<String, Object>> cowrList = cowrDAO.FindAllbyID(cow_id);
 	
 	// path
-	String Pathfile = "C:\\Users\\aditep\\git\\zcoop\\src\\JasperReport\\Cowreport\\";
+	String Pathfile  = request.getSession().getServletContext().getRealPath("/contents/report/");
 	String reportFileName = "cowreport_main.jrxml"; // test reportFileName
 	String reportPath = Pathfile + reportFileName;
 	String targetFileName = reportFileName.replace(".jrxml", ".pdf");
