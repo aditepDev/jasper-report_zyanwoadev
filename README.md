@@ -16,7 +16,8 @@ Database test
 
    - ติดตั้ง [font](https://github.com/topkoka/jasper-report_zyanwoadev/tree/master/src/fonts) ภาษาไทย
    - ทำให้ project รู้จัก font  ->> [jasperreports_extension.properties](https://github.com/topkoka/jasper-report_zyanwoadev/blob/master/src/jasperreports_extension.properties)
-
+## เลข row
+``` $V{REPORT_COUNT} ```
 ## แปลงวันที่  
 ```java 
 new java.text.SimpleDateFormat("d MMM yy", new Locale("TH","th")).format(new Date())
