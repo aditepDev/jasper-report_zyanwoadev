@@ -63,6 +63,27 @@ new java.text.SimpleDateFormat("d MMM yy", new Locale("TH","th")).format(new Dat
 (Integer.parseInt(($F{cow_breeding_log_date}.substring(0,4)))+543
 	
 )
+
+$F{birthDate}.equals("-")? $F{birthDate}:
+
+($F{birthDate}.substring(8,10)) +
+(
+(($F{birthDate}.substring(5,7).equals("01")?" ม.ค. ":""))
++(($F{birthDate}.substring(5,7).equals("02")?" ก.พ. ":""))
++(($F{birthDate}.substring(5,7).equals("03")?" มี.ค. ":""))
++(($F{birthDate}.substring(5,7).equals("04")?" เม.ย. ":""))
++(($F{birthDate}.substring(5,7).equals("05")?" พ.ค. ":""))
++(($F{birthDate}.substring(5,7).equals("06")?" มิ.ย. ":""))
++(($F{birthDate}.substring(5,7).equals("07")?" ก.ค. ":""))
++(($F{birthDate}.substring(5,7).equals("08")?" ส.ค. ":""))
++(($F{birthDate}.substring(5,7).equals("09")?" ก.ย. ":""))
++(($F{birthDate}.substring(5,7).equals("10")?" ต.ค. ":""))
++(($F{birthDate}.substring(5,7).equals("11")?" พ.ย. ":""))
++(($F{birthDate}.substring(5,7).equals("12")?" ธ.ค. ":""))
+) +
+(Integer.parseInt(($F{birthDate}.substring(0,4)))+543
+	
+)
 ```
 ## JasperReport - Java
 ```java
