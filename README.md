@@ -192,6 +192,18 @@ try {
 			e.printStackTrace();
 		}
 ```
+## parameter mainreport to subreport
+``` 
+- main
+ <parameter name="end" class="java.lang.String"/>
+ <parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false"/>
+ <subreportParameter name="end60">
+ <subreportParameterExpression><![CDATA[$P{end}]]></subreportParameterExpression>
+ </subreportParameter>
+
+- subreport 
+<parameter name="end60" class="java.lang.String" isForPrompting="false"/>
+```
 ## jasper report parameter
 #### jrxml
 ``` xml 
